@@ -8,6 +8,10 @@ Vagrant.configure("2") do |config|
      sudo apt-get update
      sudo apt-get install -y git vim curl
      sudo apt-get install mininet -y
+     sudo apt-get install -y uthash-dev
+     sudo apt-get install -y libev-dev
+     sudo apt-get install python-pip -y
+     pip install pathlib
      git clone git://github.com/mininet/mininet
      mininet/util/install.sh -fw
      sudo apt-get install python3.7 -y
