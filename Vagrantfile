@@ -17,10 +17,14 @@ Vagrant.configure("2") do |config|
      git clone git://github.com/mininet/mininet
      mininet/util/install.sh -fw
      sudo apt-get install nasm -y
-     sudo apt-get install cmake libssl-dev -y
+     sudo apt-get install libssl-dev -y
+     sudo apt remove --purge --auto-remove cmake
+     wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/null | gpg --dearmor - | sudo tee /etc/apt/trusted.gpg.d/kitware.gpg >/dev/null
+     sudo apt-add-repository "deb https://apt.kitware.com/ubuntu/ $(lsb_release -cs) main"
+     sudo apt update
+     sudo apt install cmake
      echo 'curl https://sh.rustup.rs -sSf | sh -s -- -y;' | su vagrant
      git clone --recursive https://github.com/cloudflare/quiche
-     git clone https://github.com/bschwind/mqtt-broker.git
      git clone https://github.com/bytebeamio/rumqtt
    SHELL
   end

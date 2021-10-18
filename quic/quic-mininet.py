@@ -12,7 +12,7 @@ from mininet.topo import Topo
 """
 This file provides a script to run the example client and server of quiche.
 
-It uses a simple topology with 3 clients and one server. Clients connect to
+It uses a simple dumbbell topology. Clients connect to
 the server in parallel.
 
 Due to how quiche works this script has to be run from the quiche/examples/
@@ -23,32 +23,40 @@ https://github.com/cloudflare/quiche/tree/master/examples
 """
 
 
-class SingleSwitchTopo(Topo):
-    def __init__(self, n=2, **opts):
-        Topo.__init__(self, **opts)
-        switch = self.addSwitch('switch1')
-        for h in range(n):
-            host = self.addHost('h%s' % (h + 1))
-            self.addLink(host, switch, bw=10)
+class DumbbellTopo(Topo):
+    def build(self, bw=100, delay='20ms', nl=4):
+        s1 = self.addSwitch('s1')
+        s2 = self.addSwitch('s2')
+        # Left
+        clients = list()
+        for i in range(nl):
+            client = self.addHost('hl{idx}'.format(idx=i+1))
+            clients.append(client)
+        for client in clients:
+            self.addLink(client, s1, bw=bw, delay=delay)
+        # Right
+        hr1 = self.addHost('hr1')
+        self.addLink(hr1, s2, bw=bw, delay=delay)
+
+        self.addLink(s1, s2, bw=bw, delay=delay)
 
 
 def run():
-    num_clients = 4
-    topo = SingleSwitchTopo(n=4)
-    net = Mininet(topo=topo, host=CPULimitedHost,
-                  link=TCLink, autoPinCpus=True)
+    topo = DumbbellTopo()
+    net = Mininet(topo=topo, link=TCLink, autoPinCpus=True)
 
     net.start()
     CLI(net)
     time.sleep(1)
 
-    clients = list()
-    for i in range(num_clients - 1):
-        client = net.get('h{idx}'.format(idx=i + 1))
-        clients.append(client)
+    clients = [
+        net.get('hl1'),
+        net.get('hl2'),
+        net.get('hl3'),
+        net.get('hl4')
+    ]
 
-    server = net.get('h4')
-
+    server = net.get('hr1')
     if not os.path.exists('data'):
         os.makedirs('data')
 
@@ -56,7 +64,7 @@ def run():
                server.IP(), ' 443 &> data/quic-server &')
 
     threads = list()
-    for i in range(num_clients - 1):
+    for i in range(len(clients)):
         try:
             x = Thread(target=client_send, args=(clients[i], server, i + 1))
             x.daemon = True
@@ -72,7 +80,6 @@ def run():
 
 
 def client_send(client, server, num):
-    print(client)
     for i in range(5):
         client.cmd('sudo ./client ',
                    server.IP(), ' 443 &> data/quic-client-{num}-{idx} &'.format(num=num, idx=i))
