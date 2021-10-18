@@ -2,11 +2,13 @@
 use rumqttc::{self, Client, LastWill, MqttOptions, QoS};
 use std::thread;
 use std::time::Duration;
+use std::env;
 
 fn main() {
     pretty_env_logger::init();
-
-    let mut mqttoptions = MqttOptions::new("test-1", "localhost", 1883);
+    let args: Vec<String> = env::args().collect();
+    let ip = &args[1];
+    let mut mqttoptions = MqttOptions::new("test-1", ip, 1883);
     let will = LastWill::new("hello/world", "good bye", QoS::AtMostOnce, false);
     mqttoptions.set_keep_alive(5).set_last_will(will);
 

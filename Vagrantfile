@@ -26,5 +26,9 @@ Vagrant.configure("2") do |config|
      echo 'curl https://sh.rustup.rs -sSf | sh -s -- -y;' | su vagrant
      git clone --recursive https://github.com/cloudflare/quiche
      git clone https://github.com/bytebeamio/rumqtt
+     mkdir mqtt
+     mkdir mqtt/broker
+     mkdir mqtt/client
+     ./mqtt/vscp.sh
    SHELL
   end

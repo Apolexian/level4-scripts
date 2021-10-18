@@ -1,10 +1,10 @@
-// adapted from https://github.com/bytebeamio/rumqtt/blob/master/rumqttd/examples/broker.rs
+// Adapted from https://github.com/bytebeamio/rumqtt/blob/master/rumqttd/examples/broker.rs
 use librumqttd::{Broker, Config};
 use std::thread;
 
 fn main() {
     pretty_env_logger::init();
-    let config: Config = confy::load_path("config/rumqttd.conf").unwrap();
+    let config: Config = confy::load_path("rumqttd.conf").unwrap();
     let mut broker = Broker::new(config);
 
     let mut tx = broker.link("localclient").unwrap();

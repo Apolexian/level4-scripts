@@ -9,16 +9,18 @@ from mininet.net import Mininet
 from mininet.topo import Topo
 
 """
-This file provides a script to run the example client and server of quiche.
+This file provides a way to run rumqtt in mininet.
 
 It uses a simple dumbbell topology. Clients connect to
 the server in parallel.
 
-Due to how quiche works this script has to be run from the quiche/examples/
-directory.
+The certificate generation script is provided in genpem.sh and should
+be run before this.
 
-The source code for quiche example client and server can be found at:
-https://github.com/cloudflare/quiche/tree/master/examples
+The script assumes a compiled version of rumqtt based server and client
+(see broker and client examples provided in this repo).
+
+For rumqtt see https://github.com/bytebeamio/rumqtt
 """
 
 
@@ -55,17 +57,16 @@ def run():
         net.get('hl4')
     ]
 
-    server = net.get('hr1')
+    broker = net.get('hr1')
     if not os.path.exists('data'):
         os.makedirs('data')
 
-    server.cmd('sudo ./server ',
-               server.IP(), ' 443 &> data/quic-server &')
+    broker.cmd('./broker/target/release/broker > data/mqtt-broker &')
 
     threads = list()
     for i in range(len(clients)):
         try:
-            x = Thread(target=client_send, args=(clients[i], server, i + 1))
+            x = Thread(target=client_send, args=(clients[i], broker, i + 1))
             x.daemon = True
             threads.append(x)
             x.start()
@@ -78,10 +79,10 @@ def run():
     net.stop()
 
 
-def client_send(client, server, num):
+def client_send(client, broker, num):
     for i in range(5):
-        client.cmd('sudo ./client ',
-                   server.IP(), ' 443 &> data/quic-client-{num}-{idx} &'.format(num=num, idx=i))
+        client.cmd('./client/target/release/client ', broker.IP(),
+                   '> data/mqtt-client-{num}-{idx} &'.format(num=num, idx=i))
         time.sleep(5)
         print(
             "*** Client {client_idx} done with iteration {idx}".format(client_idx=num, idx=i))
