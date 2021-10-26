@@ -1,0 +1,10 @@
+[package]
+edition = "2021"
+name = "server"
+version = "0.1.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+quic-socket = "0.3.3"
+tokio = {version = "1.12.0", features = ["full"]}
