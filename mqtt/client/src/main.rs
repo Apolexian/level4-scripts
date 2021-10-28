@@ -9,6 +9,7 @@ fn main() {
     let args: Vec<String> = env::args().collect();
     let ip = &args[1];
     let mut mqttoptions = MqttOptions::new("test-1", ip, 1883);
+    mqttoptions.set_connection_timeout(10);
     let will = LastWill::new("hello/world", "good bye", QoS::AtMostOnce, false);
     mqttoptions.set_keep_alive(5).set_last_will(will);
 
@@ -24,7 +25,7 @@ fn main() {
 
 fn publish(mut client: Client) {
     client.subscribe("hello/+/world", QoS::AtMostOnce).unwrap();
-    for i in 0..100 {
+    for i in 0..10 {
         let payload = vec![1; i as usize];
         let topic = format!("hello/{}/world", i);
         let qos = QoS::AtLeastOnce;
@@ -32,5 +33,5 @@ fn publish(mut client: Client) {
         client.publish(topic, qos, true, payload).unwrap();
     }
 
-    thread::sleep(Duration::from_secs(1));
+    thread::sleep(Duration::from_secs(5));
 }

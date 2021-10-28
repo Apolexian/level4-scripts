@@ -133,6 +133,17 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "88d1c26957f23603395cd326b0ffe64124b818f4449552f960d815cfba83a53d"
 
 [[package]]
+name = "getrandom"
+version = "0.2.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "7fcd999463524c52659517fe2cea98493cfe485d10565e7b0fb07dbba7ad2753"
+dependencies = [
+ "cfg-if",
+ "libc",
+ "wasi",
+]
+
+[[package]]
 name = "hermit-abi"
 version = "0.1.19"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -234,7 +245,7 @@ dependencies = [
 [[package]]
 name = "mqttbytes"
 version = "0.5.0"
-source = "git+https://github.com/Apolexian/rumqtt?rev=346814a11bf42493e4eeb5c4c28b303e577187c0#346814a11bf42493e4eeb5c4c28b303e577187c0"
+source = "git+https://github.com/Apolexian/rumqtt?rev=a6c81b60a81b1255ff16a1297fa052114e52ea83#a6c81b60a81b1255ff16a1297fa052114e52ea83"
 dependencies = [
  "bytes",
 ]
@@ -267,6 +278,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "bb20dcc30536a1508e75d47dd0e399bb2fe7354dcf35cda9127f2bf1ed92e30e"
 
 [[package]]
+name = "ppv-lite86"
+version = "0.2.15"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ed0cfbc8191465bed66e1718596ee0b0b35d5ee1f41c5df2189d0fe8bde535ba"
+
+[[package]]
 name = "pretty_env_logger"
 version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -287,10 +304,10 @@ dependencies = [
 
 [[package]]
 name = "quic-socket"
-version = "0.3.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b1ea8930790f813551a8a6b9a0112c9ddbed42efc0074b05dfa421212bb12c6e"
+version = "0.4.1"
+source = "git+https://github.com/Apolexian/QuicSocket?rev=cd29cb1e4fe223833df7d8bda728f0a3c1ea6fc1#cd29cb1e4fe223833df7d8bda728f0a3c1ea6fc1"
 dependencies = [
+ "log",
  "quiche",
  "tokio",
 ]
@@ -323,6 +340,46 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "38bc8cc6a5f2e3655e0899c1b848643b2562f853f114bfec7be120678e3ace05"
 dependencies = [
  "proc-macro2",
+]
+
+[[package]]
+name = "rand"
+version = "0.8.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2e7573632e6454cf6b99d7aac4ccca54be06da05aca2ef7423d22d27d4d4bcd8"
+dependencies = [
+ "libc",
+ "rand_chacha",
+ "rand_core",
+ "rand_hc",
+]
+
+[[package]]
+name = "rand_chacha"
+version = "0.3.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e6c10a63a0fa32252be49d21e7709d4d4baf8d231c2dbce1eaa8141b9b127d88"
+dependencies = [
+ "ppv-lite86",
+ "rand_core",
+]
+
+[[package]]
+name = "rand_core"
+version = "0.6.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d34f1408f55294453790c48b2f1ebbb1c5b4b7563eb1f418bcfcfdbb06ebb4e7"
+dependencies = [
+ "getrandom",
+]
+
+[[package]]
+name = "rand_hc"
+version = "0.3.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d51e9f596de227fda2ea6c84607f5558e196eeaf43c986b724ba4fb8fdf497e7"
+dependencies = [
+ "rand_core",
 ]
 
 [[package]]
@@ -360,7 +417,7 @@ dependencies = [
 [[package]]
 name = "rumqttc"
 version = "0.9.0"
-source = "git+https://github.com/Apolexian/rumqtt?rev=346814a11bf42493e4eeb5c4c28b303e577187c0#346814a11bf42493e4eeb5c4c28b303e577187c0"
+source = "git+https://github.com/Apolexian/rumqtt?rev=a6c81b60a81b1255ff16a1297fa052114e52ea83#a6c81b60a81b1255ff16a1297fa052114e52ea83"
 dependencies = [
  "async-channel",
  "bytes",
@@ -369,6 +426,7 @@ dependencies = [
  "mqttbytes",
  "pollster",
  "quic-socket",
+ "rand",
  "thiserror",
  "tokio",
  "tokio-rustls",
@@ -493,6 +551,12 @@ name = "untrusted"
 version = "0.7.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a156c684c91ea7d62626509bce3cb4e1d9ed5c4d978f7b4352658f96a4c26b4a"
+
+[[package]]
+name = "wasi"
+version = "0.10.2+wasi-snapshot-preview1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "fd6fbd9a79829dd1ad0cc20627bf1ed606756a7f77edff7b66b7064f9cb327c6"
 
 [[package]]
 name = "wasm-bindgen"

@@ -17,8 +17,8 @@ fn main() {
 
     // subscribe and publish in a separate thread
     thread::spawn(move || {
-        for _ in 0..10 {
-            for i in 0..200 {
+        for _ in 0..2 {
+            for i in 0..10 {
                 let topic = format!("hello/{}/world", i);
                 tx.publish(topic, false, vec![0; 1024]).unwrap();
             }
