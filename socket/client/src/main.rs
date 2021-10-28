@@ -5,9 +5,9 @@ use tokio;
 async fn main() {
     let addr = "0.0.0.0:4443".parse().unwrap();
     let socket = QuicSocket::bind(addr).await.unwrap();
-    let acc_addr = "0.0.0.0:4444".parse().unwrap();
+    let conn_addr = "0.0.0.0:4444".parse().unwrap();
     let mut out = [0; 1350];
-    let mut listener = socket.accept(acc_addr).unwrap();
-    let write = listener.send(&mut out).await.expect("initial send failed");
-    println!("{:?}", &out[..write])
+    let mut listener = socket.connect(conn_addr).unwrap();
+    listener.send(&mut out).await;
+    println!("{:?}", out)
 }

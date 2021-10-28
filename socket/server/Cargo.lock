@@ -206,8 +206,7 @@ dependencies = [
 [[package]]
 name = "quic-socket"
 version = "0.3.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "24d9927b62a5b0d553407a4f9ebb232a05566340e393e41d022359db99c1d9ef"
+source = "git+https://github.com/Apolexian/QuicSocket?rev=53310c2cd7d048cebe7ff139cba31fc2e9389470#53310c2cd7d048cebe7ff139cba31fc2e9389470"
 dependencies = [
  "quiche",
  "tokio",
