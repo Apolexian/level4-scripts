@@ -1,10 +1,17 @@
 use quic_socket::QuicListener;
+use tokio;
+use url::Url;
 
-fn main() {
-    let addr = "0.0.0.0:4443".parse().unwrap();
-    let mut listener = QuicListener::new(addr).unwrap();
-    let conn_addr = "0.0.0.0:4442".parse().unwrap();
-    listener.connect(conn_addr).unwrap();
-    let mut conn = listener.connection.take().unwrap();
-    conn.stream_send(0, b"hello", true).unwrap();
+#[tokio::main]
+async fn main() {
+    let url = Url::parse("http://127.0.0.1:4442").unwrap();
+    let mut payload = [6; 156];
+    QuicListener::send(
+        "cert.der".to_string(),
+        url,
+        Some("localhost".to_string()),
+        &mut payload,
+    )
+    .await
+    .unwrap();
 }

@@ -6,5 +6,5 @@ edition = "2018"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-rumqttc = {git = "https://github.com/Apolexian/rumqtt", rev="a6c81b60a81b1255ff16a1297fa052114e52ea83"}
+rumqttc = {git = "https://github.com/Apolexian/rumqtt", rev="a8bc98ee2c8839e35f6c97100928d5427c3d6fe1"}
 pretty_env_logger = "0.4.0"

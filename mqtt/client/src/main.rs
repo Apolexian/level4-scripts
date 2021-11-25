@@ -8,7 +8,8 @@ fn main() {
     pretty_env_logger::init();
     let args: Vec<String> = env::args().collect();
     let ip = &args[1];
-    let mut mqttoptions = MqttOptions::new("test-1", ip, 1883);
+    let self_addr = "0.0.0.0:1884".parse().unwrap();
+    let mut mqttoptions = MqttOptions::new("test-1", ip, 1883, self_addr);
     mqttoptions.set_connection_timeout(10);
     let will = LastWill::new("hello/world", "good bye", QoS::AtMostOnce, false);
     mqttoptions.set_keep_alive(5).set_last_will(will);
