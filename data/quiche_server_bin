@@ -1,0 +1,15 @@
+ File  .text     Size Crate
+10.9%  49.8% 779.9KiB quiche
+ 5.8%  26.3% 411.4KiB [Unknown]
+ 3.7%  16.7% 261.9KiB std
+ 0.6%   2.7%  42.7KiB ring
+ 0.2%   1.0%  15.7KiB server
+ 0.2%   1.0%  15.3KiB hashbrown
+ 0.0%   0.1%   1.7KiB mio
+ 0.0%   0.1%   1.0KiB once_cell
+ 0.0%   0.0%     720B indexmap
+ 0.0%   0.0%     381B serde_json
+ 0.0%   0.0%     483B And 3 more crates. Use -n N to show more.
+22.0% 100.0%   1.5MiB .text section size, the file size is 7.0MiB
+
+Note: numbers above are a result of guesswork. They are not 100% correct and never will be.

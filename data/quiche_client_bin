@@ -1,0 +1,15 @@
+ File  .text     Size Crate
+ 9.7%  47.3% 770.3KiB quiche
+ 5.1%  24.9% 405.1KiB [Unknown]
+ 3.4%  16.5% 268.1KiB std
+ 0.6%   2.7%  44.6KiB url
+ 0.5%   2.6%  42.0KiB ring
+ 0.5%   2.3%  36.8KiB idna
+ 0.1%   0.6%   9.6KiB client
+ 0.1%   0.4%   6.9KiB hashbrown
+ 0.0%   0.1%   1.8KiB unicode_normalization
+ 0.0%   0.1%   1.7KiB percent_encoding
+ 0.1%   0.3%   4.8KiB And 8 more crates. Use -n N to show more.
+20.4% 100.0%   1.6MiB .text section size, the file size is 7.8MiB
+
+Note: numbers above are a result of guesswork. They are not 100% correct and never will be.

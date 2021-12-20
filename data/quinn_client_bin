@@ -1,0 +1,15 @@
+ File  .text     Size Crate
+ 5.2%  23.2% 483.0KiB std
+ 3.6%  15.9% 330.1KiB quinn_proto
+ 3.2%  14.3% 296.3KiB clap
+ 2.9%  13.0% 270.9KiB rustls
+ 1.5%   6.7% 140.0KiB ring
+ 1.4%   6.2% 129.9KiB tokio
+ 1.0%   4.3%  89.7KiB quinn
+ 0.9%   3.9%  82.0KiB [Unknown]
+ 0.5%   2.1%  43.9KiB url
+ 0.4%   1.8%  36.8KiB idna
+ 1.3%   6.0% 125.1KiB And 40 more crates. Use -n N to show more.
+22.4% 100.0%   2.0MiB .text section size, the file size is 9.1MiB
+
+Note: numbers above are a result of guesswork. They are not 100% correct and never will be.

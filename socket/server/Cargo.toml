@@ -6,6 +6,6 @@ version = "0.1.0"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-quic-socket = {git = "https://github.com/Apolexian/QuicSocket", rev = "0564ca83ea94e11abe0a64d30147a9dae3052e17"}
+quic-socket = {git = "https://github.com/Apolexian/QuicSocket", rev = "de389fd1d3287de9242a20b373c5f2ed6f2a9676"}
 tokio = {version = "1.12.0", features = ["full"]}
 rcgen = "0.8.14"

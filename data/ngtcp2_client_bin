@@ -1,0 +1,24 @@
+    FILE SIZE        VM SIZE    
+ --------------  -------------- 
+  43.7%  1.09Mi   0.0%       0    .debug_info
+  20.3%   517Ki   0.0%       0    .debug_loc
+  16.1%   408Ki   0.0%       0    .debug_str
+   5.0%   127Ki   0.0%       0    .debug_line
+   4.1%   103Ki   0.0%       0    .debug_ranges
+   3.7%  95.4Ki  50.9%  95.4Ki    .text
+   1.6%  41.4Ki   0.0%       0    .debug_abbrev
+   1.1%  28.9Ki   0.0%       0    .strtab
+   0.8%  20.7Ki  11.0%  20.7Ki    .rodata
+   0.7%  17.4Ki   0.0%       0    .symtab
+   0.6%  14.1Ki   5.2%  9.68Ki    [23 Others]
+   0.5%  13.5Ki   7.2%  13.5Ki    .eh_frame
+   0.0%       0   6.1%  11.5Ki    .bss
+   0.3%  8.34Ki   0.0%       0    [Unmapped]
+   0.3%  7.79Ki   4.2%  7.79Ki    .dynstr
+   0.3%  7.24Ki   3.9%  7.24Ki    .rela.dyn
+   0.2%  6.21Ki   3.3%  6.21Ki    .dynsym
+   0.2%  5.20Ki   2.8%  5.20Ki    .rela.plt
+   0.1%  3.48Ki   1.9%  3.48Ki    .plt
+   0.1%  3.47Ki   1.9%  3.47Ki    .plt.sec
+   0.1%  3.44Ki   1.8%  3.44Ki    .data.rel.ro
+ 100.0%  2.48Mi 100.0%   187Ki    TOTAL
