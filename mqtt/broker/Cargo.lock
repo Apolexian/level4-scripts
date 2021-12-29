@@ -718,7 +718,7 @@ dependencies = [
 [[package]]
 name = "mqttbytes"
 version = "0.5.0"
-source = "git+https://github.com/Apolexian/rumqtt?rev=b8fe4f8365aa2bf12373736ef1e618361c760819#b8fe4f8365aa2bf12373736ef1e618361c760819"
+source = "git+https://github.com/Apolexian/rumqtt?rev=85b4f9bb819ce150a6090c3d6c0c9748dadf6bef#85b4f9bb819ce150a6090c3d6c0c9748dadf6bef"
 dependencies = [
  "bytes",
 ]
@@ -910,9 +910,9 @@ dependencies = [
 
 [[package]]
 name = "quic-socket"
-version = "0.7.1"
+version = "0.7.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "41f700b8a09988b1ba64843ce6652b9e1d1fed10e4fe669d8148cd0ee1da33d2"
+checksum = "0f6531ad96d954abd7a9dd85d43782a75e59e6eaf9ad5bc7945474320038ea59"
 dependencies = [
  "anyhow",
  "async-trait",
@@ -1150,7 +1150,7 @@ dependencies = [
 [[package]]
 name = "rumqttd"
 version = "0.8.0"
-source = "git+https://github.com/Apolexian/rumqtt?rev=b8fe4f8365aa2bf12373736ef1e618361c760819#b8fe4f8365aa2bf12373736ef1e618361c760819"
+source = "git+https://github.com/Apolexian/rumqtt?rev=85b4f9bb819ce150a6090c3d6c0c9748dadf6bef#85b4f9bb819ce150a6090c3d6c0c9748dadf6bef"
 dependencies = [
  "argh",
  "bytes",
@@ -1172,7 +1172,7 @@ dependencies = [
 [[package]]
 name = "rumqttlog"
 version = "0.8.0"
-source = "git+https://github.com/Apolexian/rumqtt?rev=b8fe4f8365aa2bf12373736ef1e618361c760819#b8fe4f8365aa2bf12373736ef1e618361c760819"
+source = "git+https://github.com/Apolexian/rumqtt?rev=85b4f9bb819ce150a6090c3d6c0c9748dadf6bef#85b4f9bb819ce150a6090c3d6c0c9748dadf6bef"
 dependencies = [
  "byteorder",
  "bytes",

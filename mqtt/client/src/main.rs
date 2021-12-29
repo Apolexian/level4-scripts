@@ -1,38 +1,40 @@
 // Adapted from https://github.com/bytebeamio/rumqtt/blob/master/rumqttc/examples/syncpubsub.rs
-use rumqttc::{self, Client, LastWill, MqttOptions, QoS};
-use std::thread;
-use std::time::Duration;
+use quic_socket::{QuicClient, QuicSocket};
+use rumqttc::{self, AsyncClient, MqttOptions, QoS};
 use std::env;
+use tokio::{task};
 
-fn main() {
+#[tokio::main(worker_threads = 1)]
+async fn main() {
     let addr = "127.0.0.1:5000".parse().unwrap();
     pretty_env_logger::init();
     let args: Vec<String> = env::args().collect();
     let ip = &args[1];
-    let mut mqttoptions = MqttOptions::new("test-1", ip, 1883, addr);
+    let client = QuicClient::new(None).await;
+    let mut mqttoptions = MqttOptions::new("test-1", ip, 1883, addr, client);
     mqttoptions.set_connection_timeout(10);
-    let will = LastWill::new("hello/world", "good bye", QoS::AtMostOnce, false);
-    mqttoptions.set_keep_alive(5).set_last_will(will);
+    mqttoptions.set_keep_alive(5);
 
-    let (client, mut connection) = Client::new(mqttoptions, 10);
-    thread::spawn(move || publish(client));
+    let (client, mut eventloop) = AsyncClient::new(mqttoptions, 100);
+    task::spawn(async move {
+        requests(client).await;
+    });
 
-    for (i, notification) in connection.iter().enumerate() {
-        println!("{}. Notification = {:?}", i, notification);
+    loop {
+        let event = eventloop.poll().await;
+        println!("{:?}", event.unwrap());
     }
-
-    println!("Done with the stream!!");
 }
 
-fn publish(mut client: Client) {
-    client.subscribe("hello/+/world", QoS::AtMostOnce).unwrap();
-    for i in 0..10 {
-        let payload = vec![1; i as usize];
-        let topic = format!("hello/{}/world", i);
-        let qos = QoS::AtLeastOnce;
-
-        client.publish(topic, qos, true, payload).unwrap();
+async fn requests(client: AsyncClient) {
+    client
+        .subscribe(format!("topic0"), QoS::AtMostOnce)
+        .await
+        .unwrap();
+    for i in 0..100 {
+        client
+            .publish("topic0", QoS::AtMostOnce, true, vec![1; i])
+            .await
+            .unwrap();
     }
-
-    thread::sleep(Duration::from_secs(5));
 }
