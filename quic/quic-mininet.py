@@ -26,17 +26,15 @@ class DumbbellTopo(Topo):
     def build(self, bw=100, delay='20ms', nl=4):
         s1 = self.addSwitch('s1')
         s2 = self.addSwitch('s2')
-        # Left
         clients = list()
         for i in range(nl):
-            client = self.addHost('hl{idx}'.format(idx=i+1))
+            client = self.addHost('h{idx}'.format(idx=i+1))
             clients.append(client)
-        for client in clients:
-            self.addLink(client, s1, bw=bw, delay=delay)
-        # Right
-        hr1 = self.addHost('hr1')
-        self.addLink(hr1, s2, bw=bw, delay=delay)
-
+        for index, client in enumerate(clients):
+            if index % 2 == 0:
+                self.addLink(client, s1, bw=bw, delay=delay)
+            else:
+                self.addLink(client, s2, bw=bw, delay=delay)
         self.addLink(s1, s2, bw=bw, delay=delay)
 
 

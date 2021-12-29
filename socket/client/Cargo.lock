@@ -409,8 +409,8 @@ dependencies = [
 
 [[package]]
 name = "quic-socket"
-version = "0.7.0"
-source = "git+https://github.com/Apolexian/QuicSocket?rev=de389fd1d3287de9242a20b373c5f2ed6f2a9676#de389fd1d3287de9242a20b373c5f2ed6f2a9676"
+version = "0.7.1"
+source = "git+https://github.com/Apolexian/QuicSocket?rev=ae838ac2a792ac4b6f2d4c79f01071f7511a3feb#ae838ac2a792ac4b6f2d4c79f01071f7511a3feb"
 dependencies = [
  "anyhow",
  "async-trait",
