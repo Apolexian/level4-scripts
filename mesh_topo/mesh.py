@@ -8,47 +8,62 @@ from mininet.link import TCLink
 from mininet.net import Mininet
 from mininet.topo import Topo
 
+
 class MeshHostsConfig():
     def __init__(self, num_switches, nodes_per_switch):
         self.num_switches = num_switches
         self.nodes_per_switch = nodes_per_switch
 
+
+class LinkConfig():
+    def __init__(self, bw, delay, packet_loss):
+        self.bandwidth = bw
+        self.delay = delay
+        self.packet_loss = packet_loss
+
+
 class MeshTopo(Topo):
-    def build(self, hosts_config, bw=100, delay='20ms', nl=4):
+    def build(self, hosts_config, link_config):
         switches = []
         for i in range(hosts_config.num_switches):
             s = self.addSwitch(f's{i}', failmode='standalone', stp=True)
             switches.append([s, []])
             for j in range(hosts_config.nodes_per_switch):
                 h = self.addHost(f'h{i}{j}')
-                self.addLink(switches[i][0], h, bw=bw, delay=delay)
+                self.addLink(
+                    switches[i][0], h, bw=link_config.bandwidth, delay=link_config.delay)
                 switches[i][1].append(h)
-        
+
         for i in range(len(switches)):
             for j in range(i + 1, len(switches)):
-                self.addLink(switches[i][0], switches[j][0], bw=bw, delay=delay)
-        
+                self.addLink(switches[i][0], switches[j][0],
+                             bw=link_config.bandwidth, delay=link_config.delay)
+
         for s in switches:
             hosts = s[1]
             for i in range(len(hosts)):
                 for j in range(i + 1, len(hosts)):
-                    self.addLink(hosts[i], hosts[j], bw=bw, delay=delay)
-        
+                    self.addLink(
+                        hosts[i], hosts[j], bw=link_config.bandwidth, delay=link_config.delay)
+
         h = self.addHost('h9')
         s = self.addSwitch(f's9', failmode='standalone', stp=True)
-        self.addLink(s, h, bw=bw, delay=delay)
+        self.addLink(s, h, bw=link_config.bandwidth, delay=link_config.delay)
         for sw in switches:
-            self.addLink(sw[0], s, bw=bw, delay=delay)
+            self.addLink(sw[0], s, bw=link_config.bandwidth,
+                         delay=link_config.delay)
+
 
 def run():
     hosts_config = MeshHostsConfig(3, 4)
-    topo = MeshTopo(hosts_config)
+    link_config = LinkConfig(100, '20ms', 5)
+    topo = MeshTopo(hosts_config, link_config)
     net = Mininet(topo=topo, link=TCLink, autoPinCpus=True)
 
     net.start()
     CLI(net)
     time.sleep(1)
-    
+
     broker = net.get('h9')
     clients = []
     h_22 = net.get('h22')
