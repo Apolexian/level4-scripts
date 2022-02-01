@@ -7,6 +7,8 @@ from mininet.cli import CLI
 from mininet.link import TCLink
 from mininet.net import Mininet
 from mininet.topo import Topo
+from mininet.node import Controller, Host
+from mininet.nodelib import LinuxBridge
 
 
 class MeshHostsConfig():
@@ -26,10 +28,10 @@ class MeshTopo(Topo):
     def build(self, hosts_config, link_config):
         switches = []
         for i in range(hosts_config.num_switches):
-            s = self.addSwitch(f's{i}', failmode='standalone', stp=True)
+            s = self.addSwitch(f's{i}', cls=LinuxBridge)
             switches.append([s, []])
             for j in range(hosts_config.nodes_per_switch):
-                h = self.addHost(f'h{i}{j}')
+                h = self.addHost(f'h{i}{j}', cls=Host, defaultRoute=None)
                 self.addLink(
                     switches[i][0], h, bw=link_config.bandwidth, delay=link_config.delay)
                 switches[i][1].append(h)
@@ -55,26 +57,24 @@ class MeshTopo(Topo):
 
 
 def run():
-    hosts_config = MeshHostsConfig(3, 4)
+    hosts_config = MeshHostsConfig(1, 10)
     link_config = LinkConfig(100, '20ms', 5)
     topo = MeshTopo(hosts_config, link_config)
     net = Mininet(topo=topo, link=TCLink, autoPinCpus=True)
-
     net.start()
+
     CLI(net)
     time.sleep(1)
 
     broker = net.get('h9')
     clients = []
-    h_22 = net.get('h22')
-    h_12 = net.get('h12')
-    clients.append(h_22)
-    clients.append(h_12)
+    h = net.get('h22')
+    clients.append(h)
+
+    broker.cmd('./broker &> data/mqtt-broker &')
 
     if not os.path.exists('data'):
         os.makedirs('data')
-
-    broker.cmd('./broker/target/release/broker > data/mqtt-broker &')
 
     threads = list()
     for i in range(len(clients)):
@@ -93,12 +93,9 @@ def run():
 
 
 def client_send(client, broker, num):
-    for i in range(5):
-        client.cmd('./client/target/release/client ', broker.IP(),
-                   '> data/mqtt-client-{num}-{idx} &'.format(num=num, idx=i))
-        time.sleep(5)
-        print(
-            "*** Client {client_idx} done with iteration {idx}".format(client_idx=num, idx=i))
+    client.cmd(
+        './client ', broker.IP(), '&> data/mqtt-client-{num} &'.format(num=num))
+    time.sleep(5)
 
 
 if __name__ == '__main__':

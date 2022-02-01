@@ -1,4 +1,5 @@
 use tokio::{task, time};
+use std::env;
 
 use rumqttc::{self, AsyncClient, MqttOptions, QoS};
 use std::error::Error;
@@ -7,9 +8,10 @@ use std::time::Duration;
 #[tokio::main(worker_threads = 1)]
 async fn main() -> Result<(), Box<dyn Error>> {
     pretty_env_logger::init();
-    // color_backtrace::install();
+    let args: Vec<String> = env::args().collect();
+    let ip = &args[1];
 
-    let mut mqttoptions = MqttOptions::new("test-1", "localhost", 1883);
+    let mut mqttoptions = MqttOptions::new("test-1", ip, 1883);
     mqttoptions.set_keep_alive(Duration::from_secs(5));
 
     let (client, mut eventloop) = AsyncClient::new(mqttoptions, 10);
