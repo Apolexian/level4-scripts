@@ -1,0 +1,43 @@
+Topic 1
+-------
+
+GENERICO-CORPO/JSON/0/1/ADDITIVE-MANUFACTURING-12/PRINT/1
+
+Payload 1
+-------
+
+"print" = {
+    "Timestamp"="20201001 171035",
+    "BedTemp"="75",
+    "ExtruderTemp"="205",
+    "Adhesion"="Skirt",
+    "File"="/home/prints/base.gcode",
+    "Speed"="50 mm/s",
+    "Layer Height"="0.12 mm",
+    "Retraction"="6mm at 25mm/s",
+    "Infill"="20%",
+    "Initial layer speed"="20 mm/s",
+    "Initial fan speed"="0%"
+}
+
+Topic 2
+-------
+
+GENERICO-CORPO/JSON/0/1/ADDITIVE-MANUFACTURING-13/PRINT/1
+
+Payload 2
+-------
+
+"print" = {
+    "Timestamp"="20201001 171035",
+    "BedTemp"="75",
+    "ExtruderTemp"="205",
+    "Adhesion"="Skirt",
+    "File"="/home/prints/part.gcode",
+    "Speed"="50 mm/s",
+    "Layer Height"="0.12 mm",
+    "Retraction"="6mm at 25mm/s",
+    "Infill"="20%",
+    "Initial layer speed"="20 mm/s",
+    "Initial fan speed"="0%"
+}
