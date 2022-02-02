@@ -7,8 +7,7 @@ from mininet.cli import CLI
 from mininet.link import TCLink
 from mininet.net import Mininet
 from mininet.topo import Topo
-from mininet.node import Controller, Host
-from mininet.nodelib import LinuxBridge
+from mininet.node import Host
 
 
 class MeshHostsConfig():
