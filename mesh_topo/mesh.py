@@ -28,18 +28,13 @@ class MeshTopo(Topo):
     def build(self, hosts_config, link_config):
         switches = []
         for i in range(hosts_config.num_switches):
-            s = self.addSwitch(f's{i}', cls=LinuxBridge)
+            s = self.addSwitch(f's{i}')
             switches.append([s, []])
             for j in range(hosts_config.nodes_per_switch):
                 h = self.addHost(f'h{i}{j}', cls=Host, defaultRoute=None)
                 self.addLink(
                     switches[i][0], h, bw=link_config.bandwidth, delay=link_config.delay)
                 switches[i][1].append(h)
-
-        for i in range(len(switches)):
-            for j in range(i + 1, len(switches)):
-                self.addLink(switches[i][0], switches[j][0],
-                             bw=link_config.bandwidth, delay=link_config.delay)
 
         for s in switches:
             hosts = s[1]
@@ -57,7 +52,7 @@ class MeshTopo(Topo):
 
 
 def run():
-    hosts_config = MeshHostsConfig(1, 10)
+    hosts_config = MeshHostsConfig(2, 5)
     link_config = LinkConfig(100, '20ms', 5)
     topo = MeshTopo(hosts_config, link_config)
     net = Mininet(topo=topo, link=TCLink, autoPinCpus=True)
@@ -68,16 +63,16 @@ def run():
 
     broker = net.get('h9')
     clients = []
-    h = net.get('h22')
-    clients.append(h)
+    h13 = net.get('h13')
+    clients.append(h13)
 
-    broker.cmd('./broker &> data/mqtt-broker &')
+    broker.cmd('./broker > data/mqtt-broker &')
 
     if not os.path.exists('data'):
         os.makedirs('data')
 
     threads = list()
-    for i in range(len(clients)):
+    for i in range(len(clients) - 1):
         try:
             x = Thread(target=client_send, args=(clients[i], broker, i + 1))
             x.daemon = True
