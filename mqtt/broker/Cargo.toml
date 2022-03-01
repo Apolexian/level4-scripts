@@ -7,5 +7,5 @@ edition = "2018"
 
 [dependencies]
 pretty_env_logger = "0.4"
-rumqttd = {git = "https://github.com/Apolexian/rumqtt", rev="85b4f9bb819ce150a6090c3d6c0c9748dadf6bef"}
+rumqttd = {git = "https://github.com/Apolexian/rumqtt", rev="67e188230cb5c330a3318437ddd5ec79a86149fc"}
 confy = "0.4.0"

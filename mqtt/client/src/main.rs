@@ -2,7 +2,8 @@
 use quic_socket::{QuicClient, QuicSocket};
 use rumqttc::{self, AsyncClient, MqttOptions, QoS};
 use std::env;
-use tokio::{task};
+use tokio::{task, time};
+use std::time::Duration;
 
 #[tokio::main(worker_threads = 1)]
 async fn main() {
@@ -28,13 +29,30 @@ async fn main() {
 
 async fn requests(client: AsyncClient) {
     client
-        .subscribe(format!("topic0"), QoS::AtMostOnce)
+        .subscribe("GENERICO-CORPO/JSON/0/1/ADDITIVE-MANUFACTURING-13/PRINT/1", QoS::AtMostOnce)
         .await
         .unwrap();
-    for i in 0..100 {
+    let payload = "\"print\" = {
+        \"Timestamp\"=\"20201001 171035\",
+        \"BedTemp\"=\"75\",
+        \"ExtruderTemp\"=\"205\",
+        \"Adhesion\"=\"Skirt\",
+        \"File\"=\"/home/prints/base.gcode\",
+        \"Speed\"=\"50 mm/s\",
+        \"Layer Height\"=\"0.12 mm\",
+        \"Retraction\"=\"6mm at 25mm/s\",
+        \"Infill\"=\"20%\",
+        \"Initial layer speed\"=\"20 mm/s\",
+        \"Initial fan speed\"=\"0%\"
+    }".as_bytes();
+    for _ in 1..=100 {
         client
-            .publish("topic0", QoS::AtMostOnce, true, vec![1; i])
+            .publish("GENERICO-CORPO/JSON/0/1/ADDITIVE-MANUFACTURING-13/PRINT/1", QoS::ExactlyOnce, false, payload)
             .await
             .unwrap();
+
+        time::sleep(Duration::from_secs(1)).await;
     }
+
+    time::sleep(Duration::from_secs(120)).await;
 }

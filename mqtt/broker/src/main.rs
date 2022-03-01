@@ -1,4 +1,3 @@
-// Adapted from https://github.com/bytebeamio/rumqtt/blob/master/rumqttd/examples/broker.rs
 use librumqttd::{Broker, Config};
 use std::thread;
 
@@ -15,11 +14,13 @@ fn main() {
     let mut rx = tx.connect(300).unwrap();
     tx.subscribe("#").unwrap();
 
-    // subscribe and publish in a separate thread
     thread::spawn(move || {
-        for i in 0..20 {
-            let topic = format!("topic{}", i);
-            tx.publish(topic, true, vec![0; 1024]).unwrap();
+        for i in 2..4 {
+            let topic = format!(
+                "GENERICO-CORPO/JSON/0/1/ADDITIVE-MANUFACTURING-1{}/PRINT/1",
+                i
+            );
+            tx.publish(topic, true, "init".as_bytes()).unwrap();
         }
     });
 
