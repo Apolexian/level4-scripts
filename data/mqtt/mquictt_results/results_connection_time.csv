@@ -1,0 +1,16 @@
+scenario,link,metric,time
+home,3g,transport connection,0.031456
+home,4g,transport connection,0.019363
+home,wifi,transport connection,0.013263
+home,zigbee,transport connection,0.005681
+home,ethernet,transport connection,0.001486
+farm,3g,transport connection,0.045201
+farm,4g,transport connection,0.020827
+farm,wifi,transport connection,0.015028
+farm,zigbee,transport connection,0.006330
+farm,ethernet,transport connection,0.001555
+synth,3g,transport connection,0.092295
+synth,4g,transport connection,0.020929
+synth,wifi,transport connection,0.060551
+synth,zigbee,transport connection,0.038142
+synth,ethernet,transport connection,0.003876
