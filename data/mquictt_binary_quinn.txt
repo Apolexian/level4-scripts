@@ -1,0 +1,251 @@
+0.2%   0.8%  30.7KiB          quinn_proto quinn_proto::connection::Connection::process_payload
+ 0.2%   0.7%  26.7KiB          quinn_proto quinn_proto::endpoint::Endpoint::handle
+ 0.2%   0.6%  22.0KiB          quinn_proto quinn_proto::connection::Connection::process_decrypted_packet
+ 0.1%   0.5%  18.1KiB          quinn_proto quinn_proto::connection::Connection::poll_transmit
+ 0.1%   0.4%  16.9KiB          quinn_proto quinn_proto::connection::Connection::handle_packet
+ 0.1%   0.2%   8.7KiB                quinn <quinn::endpoint::EndpointDriver as core::future::future::Future>::poll
+ 0.1%   0.2%   8.4KiB          quinn_proto quinn_proto::connection::streams::state::StreamsState::write_control_frames
+ 0.1%   0.2%   8.1KiB          quinn_proto quinn_proto::connection::Connection::handle_timeout
+ 0.0%   0.1%   5.5KiB                quinn <quinn::connection::ConnectionDriver as core::future::future::Future>::poll
+ 0.0%   0.1%   5.1KiB          quinn_proto quinn_proto::connection::Connection::process_early_payload
+ 0.0%   0.1%   5.1KiB          quinn_proto quinn_proto::connection::Connection::on_ack_received
+ 0.0%   0.1%   5.0KiB          quinn_proto quinn_proto::connection::Connection::new
+ 0.0%   0.1%   4.6KiB                quinn quinn::connection::ConnectionInner::terminate
+ 0.0%   0.1%   4.5KiB          quinn_proto quinn_proto::connection::Connection::detect_lost_packets
+ 0.0%   0.1%   4.3KiB          quinn_proto quinn_proto::transport_parameters::TransportParameters::read
+ 0.0%   0.1%   4.2KiB          quinn_proto quinn_proto::connection::streams::state::StreamsState::write_stream_frames
+ 0.0%   0.1%   4.1KiB          quinn_proto alloc::collections::btree::node::Handle<alloc::collections::btree::node::Nod...
+ 0.0%   0.1%   4.0KiB          quinn_proto quinn_proto::connection::streams::state::StreamsState::received
+ 0.0%   0.1%   3.9KiB          quinn_proto quinn_proto::endpoint::Endpoint::handle_event
+ 0.0%   0.1%   3.7KiB          quinn_proto quinn_proto::connection::streams::SendStream::write
+ 0.0%   0.1%   3.6KiB          quinn_proto <quinn_proto::frame::Iter as core::iter::traits::iterator::Iterator>::next
+ 0.0%   0.1%   3.5KiB          quinn_proto quinn_proto::packet::PartialDecode::new
+ 0.0%   0.1%   3.2KiB          quinn_proto quinn_proto::connection::packet_builder::PacketBuilder::new
+ 0.0%   0.1%   3.1KiB          quinn_proto quinn_proto::packet::Header::encode
+ 0.0%   0.1%   3.0KiB          quinn_proto quinn_proto::transport_parameters::TransportParameters::write
+ 0.0%   0.1%   2.9KiB          quinn_proto quinn_proto::connection::Connection::handle_decode
+ 0.0%   0.1%   2.9KiB          quinn_proto quinn_proto::connection::streams::state::StreamsState::received_reset
+ 0.0%   0.1%   2.8KiB            quinn_udp quinn_udp::imp::send
+ 0.0%   0.1%   2.7KiB          quinn_proto quinn_proto::connection::Connection::init_0rtt
+ 0.0%   0.1%   2.6KiB          quinn_proto quinn_proto::connection::Connection::read_crypto
+ 0.0%   0.1%   2.6KiB          quinn_proto quinn_proto::endpoint::Endpoint::stateless_reset
+ 0.0%   0.1%   2.5KiB                quinn quinn::endpoint::Endpoint::new
+ 0.0%   0.1%   2.4KiB          quinn_proto quinn_proto::connection::streams::state::StreamsState::received_max_stream_data
+ 0.0%   0.1%   2.4KiB          quinn_proto hashbrown::raw::RawTable<T,A>::reserve_rehash
+ 0.0%   0.1%   2.3KiB          quinn_proto alloc::collections::btree::node::Handle<alloc::collections::btree::node::Nod...
+ 0.0%   0.1%   2.2KiB                quinn quinn::connection::Connecting::new
+ 0.0%   0.1%   2.2KiB                quinn quinn::recv_stream::RecvStream::poll_read
+ 0.0%   0.1%   2.1KiB          quinn_proto quinn_proto::connection::Connection::handle_event
+ 0.0%   0.1%   2.1KiB          quinn_proto quinn_proto::connection::Connection::write_crypto
+ 0.0%   0.1%   2.0KiB          quinn_proto quinn_proto::connection::streams::state::StreamsState::zero_rtt_rejected
+ 0.0%   0.0%   1.9KiB                quinn quinn::send_stream::SendStream::poll_finish
+ 0.0%   0.0%   1.9KiB          quinn_proto quinn_proto::connection::packet_builder::PacketBuilder::finish
+ 0.0%   0.0%   1.8KiB          quinn_proto quinn_proto::connection::assembler::Assembler::defragment
+ 0.0%   0.0%   1.8KiB          quinn_proto quinn_proto::connection::streams::recv::Chunks::finalize_inner
+ 0.0%   0.0%   1.8KiB          quinn_proto quinn_proto::endpoint::Endpoint::send_new_identifiers
+ 0.0%   0.0%   1.8KiB          quinn_proto quinn_proto::connection::streams::state::StreamsState::insert
+ 0.0%   0.0%   1.7KiB          quinn_proto quinn_proto::connection::Connection::handle_first_packet
+ 0.0%   0.0%   1.7KiB          quinn_proto quinn_proto::connection::streams::recv::Recv::ingest
+ 0.0%   0.0%   1.7KiB          quinn_proto quinn_proto::connection::streams::recv::Chunks::next
+ 0.0%   0.0%   1.6KiB          quinn_proto alloc::collections::btree::navigate::<impl alloc::collections::btree::node::...
+ 0.0%   0.0%   1.6KiB                quinn core::ptr::drop_in_place<quinn::connection::ConnectionInner>
+ 0.0%   0.0%   1.6KiB                  std core::ptr::drop_in_place<core::cell::UnsafeCell<quinn::connection::Connectio...
+ 0.0%   0.0%   1.6KiB                  std core::ptr::drop_in_place<quinn_proto::connection::Connection>
+ 0.0%   0.0%   1.6KiB                  std core::ptr::drop_in_place<quinn_proto::connection::Connection>
+ 0.0%   0.0%   1.6KiB                  std core::ptr::drop_in_place<quinn_proto::connection::Connection>
+ 0.0%   0.0%   1.6KiB                  std core::ptr::drop_in_place<quinn_proto::connection::Connection>
+ 0.0%   0.0%   1.6KiB                  std core::ptr::drop_in_place<quinn_proto::connection::Connection>
+ 0.0%   0.0%   1.6KiB                  std core::ptr::drop_in_place<quinn_proto::connection::Connection>
+ 0.0%   0.0%   1.6KiB                  std core::ptr::drop_in_place<quinn_proto::connection::Connection>
+ 0.0%   0.0%   1.6KiB                  std core::ptr::drop_in_place<quinn_proto::connection::Connection>
+ 0.0%   0.0%   1.6KiB          quinn_proto quinn_proto::connection::streams::RecvStream::stop
+ 0.0%   0.0%   1.6KiB          quinn_proto quinn_proto::connection::pacing::Pacer::delay
+ 0.0%   0.0%   1.6KiB                quinn <quinn::send_stream::WriteAll as core::future::future::Future>::poll
+ 0.0%   0.0%   1.6KiB          quinn_proto hashbrown::raw::RawTable<T,A>::reserve_rehash
+ 0.0%   0.0%   1.6KiB          quinn_proto hashbrown::raw::RawTable<T,A>::reserve_rehash
+ 0.0%   0.0%   1.5KiB          quinn_proto quinn_proto::connection::streams::recv::Recv::credit_consumed_by
+ 0.0%   0.0%   1.5KiB                  std core::ptr::drop_in_place<core::cell::UnsafeCell<quinn::connection::Connectio...
+ 0.0%   0.0%   1.5KiB                  std core::ptr::drop_in_place<core::cell::UnsafeCell<quinn::connection::Connectio...
+ 0.0%   0.0%   1.5KiB          quinn_proto quinn_proto::packet::PartialDecode::finish
+ 0.0%   0.0%   1.5KiB          quinn_proto quinn_proto::connection::datagrams::DatagramState::received
+ 0.0%   0.0%   1.4KiB          quinn_proto alloc::collections::btree::navigate::<impl alloc::collections::btree::node::...
+ 0.0%   0.0%   1.4KiB          quinn_proto quinn_proto::connection::streams::state::StreamsState::received_ack_of
+ 0.0%   0.0%   1.4KiB          quinn_proto quinn_proto::crypto::rustls::<impl quinn_proto::crypto::ServerConfig for rus...
+ 0.0%   0.0%   1.4KiB          quinn_proto quinn_proto::endpoint::Endpoint::new
+ 0.0%   0.0%   1.4KiB          quinn_proto core::ptr::drop_in_place<rustls::msgs::message::Message>
+ 0.0%   0.0%   1.3KiB          quinn_proto <alloc::collections::vec_deque::iter::Iter<T> as core::iter::traits::iterato...
+ 0.0%   0.0%   1.3KiB            quinn_udp quinn_udp::log_sendmsg_error
+ 0.0%   0.0%   1.3KiB          quinn_proto quinn_proto::connection::Connection::discard_space
+ 0.0%   0.0%   1.3KiB          quinn_proto <quinn_proto::frame::Frame as core::fmt::Debug>::fmt
+ 0.0%   0.0%   1.3KiB          quinn_proto hashbrown::raw::RawTable<T,A>::reserve_rehash
+ 0.0%   0.0%   1.3KiB          quinn_proto quinn_proto::range_set::array_range_set::ArrayRangeSet::insert
+ 0.0%   0.0%   1.3KiB          quinn_proto quinn_proto::connection::streams::state::StreamsState::reset_acked
+ 0.0%   0.0%   1.3KiB          quinn_proto quinn_proto::endpoint::Endpoint::initial_close
+ 0.0%   0.0%   1.2KiB          quinn_proto quinn_proto::connection::Connection::handle_coalesced
+ 0.0%   0.0%   1.2KiB          quinn_proto <quinn_proto::connection::spaces::Retransmits as core::ops::bit::BitOrAssign...
+ 0.0%   0.0%   1.2KiB          quinn_proto hashbrown::raw::RawTable<T,A>::reserve_rehash
+ 0.0%   0.0%   1.2KiB          quinn_proto alloc::collections::btree::navigate::<impl alloc::collections::btree::node::...
+ 0.0%   0.0%   1.2KiB                quinn <core::future::from_generator::GenFuture<T> as core::future::future::Future>...
+ 0.0%   0.0%   1.2KiB          quinn_proto quinn_proto::connection::Connection::upgrade_crypto
+ 0.0%   0.0%   1.2KiB            quinn_udp quinn_udp::imp::recv
+ 0.0%   0.0%   1.1KiB          quinn_proto quinn_proto::connection::cid_state::CidState::on_cid_retirement
+ 0.0%   0.0%   1.1KiB          quinn_proto quinn_proto::token::RetryToken::from_bytes
+ 0.0%   0.0%   1.1KiB          quinn_proto quinn_proto::connection::Connection::populate_acks
+ 0.0%   0.0%   1.1KiB            quinn_udp quinn_udp::imp::UdpSocket::from_std
+ 0.0%   0.0%   1.0KiB                quinn <quinn::connection::OpenBi as core::future::future::Future>::poll
+ 0.0%   0.0%   1.0KiB          quinn_proto quinn_proto::connection::streams::recv::Chunks::new
+ 0.0%   0.0%   1.0KiB          quinn_proto alloc::collections::btree::remove::<impl alloc::collections::btree::node::Ha...
+ 0.0%   0.0%   1.0KiB                quinn <quinn::connection::IncomingBiStreams as futures_core::stream::Stream>::poll...
+ 0.0%   0.0%   1.0KiB                quinn quinn::endpoint::ConnectionSet::insert
+ 0.0%   0.0%   1.0KiB          quinn_proto quinn_proto::endpoint::Endpoint::add_connection
+ 0.0%   0.0%   1.0KiB          quinn_proto quinn_proto::connection::streams::state::StreamsState::retransmit_all_for_0rtt
+ 0.0%   0.0%    1017B                  std core::ptr::drop_in_place<quinn_proto::crypto::rustls::TlsSession>
+ 0.0%   0.0%     964B                quinn core::task::poll::Poll<T>::map
+ 0.0%   0.0%     957B          quinn_proto quinn_proto::crypto::rustls::<impl quinn_proto::crypto::ServerConfig for rus...
+ 0.0%   0.0%     952B          quinn_proto alloc::collections::binary_heap::PeekMut<T>::pop
+ 0.0%   0.0%     951B          quinn_proto hashbrown::map::HashMap<K,V,S,A>::insert
+ 0.0%   0.0%     934B          quinn_proto quinn_proto::token::RetryToken::encode
+ 0.0%   0.0%     926B          quinn_proto quinn_proto::connection::cid_state::CidState::next_timeout
+ 0.0%   0.0%     922B          quinn_proto quinn_proto::connection::assembler::Assembler::insert
+ 0.0%   0.0%     920B          quinn_proto <quinn_proto::congestion::cubic::Cubic as quinn_proto::congestion::Controlle...
+ 0.0%   0.0%     915B          quinn_proto quinn_proto::connection::Connection::on_packet_acked
+ 0.0%   0.0%     895B          quinn_proto hashbrown::rustc_entry::<impl hashbrown::map::HashMap<K,V,S,A>>::rustc_entry
+ 0.0%   0.0%     883B                quinn tokio::runtime::task::harness::Harness<T,S>::poll
+ 0.0%   0.0%     883B                quinn tokio::runtime::task::harness::Harness<T,S>::poll
+ 0.0%   0.0%     883B                quinn tokio::runtime::task::harness::Harness<T,S>::poll
+ 0.0%   0.0%     883B                quinn tokio::runtime::task::harness::Harness<T,S>::poll
+ 0.0%   0.0%     874B                quinn futures_util::stream::stream::StreamExt::poll_next_unpin
+ 0.0%   0.0%     868B          quinn_proto quinn_proto::range_set::array_range_set::ArrayRangeSet::remove
+ 0.0%   0.0%     863B          quinn_proto quinn_proto::connection::Connection::handle_peer_params
+ 0.0%   0.0%     859B          quinn_proto quinn_proto::range_set::btree_range_set::RangeSet::insert
+ 0.0%   0.0%     851B          quinn_proto quinn_proto::connection::streams::push_pending
+ 0.0%   0.0%     841B          quinn_proto quinn_proto::connection::Connection::close_common
+ 0.0%   0.0%     841B                quinn core::ptr::drop_in_place<quinn::endpoint::EndpointInner>
+ 0.0%   0.0%     841B                  std core::ptr::drop_in_place<core::cell::UnsafeCell<quinn::endpoint::EndpointInn...
+ 0.0%   0.0%     841B                  std core::ptr::drop_in_place<core::cell::UnsafeCell<quinn::endpoint::EndpointInn...
+ 0.0%   0.0%     841B                  std core::ptr::drop_in_place<core::cell::UnsafeCell<quinn::endpoint::EndpointInn...
+ 0.0%   0.0%     840B            quinn_udp tokio::io::driver::registration::Registration::new_with_interest_and_handle
+ 0.0%   0.0%     834B          quinn_proto hashbrown::map::HashMap<K,V,S,A>::insert
+ 0.0%   0.0%     822B          quinn_proto <quinn_proto::frame::Ack as core::fmt::Debug>::fmt
+ 0.0%   0.0%     818B          quinn_proto quinn_proto::connection::send_buffer::SendBuffer::ack
+ 0.0%   0.0%     814B          quinn_proto quinn_proto::connection::Connection::close_inner
+ 0.0%   0.0%     810B          quinn_proto <quinn_proto::crypto::rustls::TlsSession as quinn_proto::crypto::Session>::i...
+ 0.0%   0.0%     801B          quinn_proto quinn_proto::connection::Connection::pto_time_and_space
+ 0.0%   0.0%     784B                quinn <alloc::collections::btree::map::BTreeMap<K,V> as core::ops::drop::Drop>::drop
+ 0.0%   0.0%     783B            quinn_udp tokio::util::slab::Allocator<T>::allocate
+ 0.0%   0.0%     781B          quinn_proto <quinn_proto::crypto::rustls::TlsSession as quinn_proto::crypto::Session>::r...
+ 0.0%   0.0%     779B                quinn alloc::collections::vec_deque::VecDeque<T,A>::wrap_copy
+ 0.0%   0.0%     761B                quinn <futures_channel::mpsc::UnboundedReceiver<T> as core::ops::drop::Drop>::drop
+ 0.0%   0.0%     757B          quinn_proto quinn_proto::connection::cid_state::CidState::on_cid_timeout
+ 0.0%   0.0%     741B          quinn_proto alloc::collections::btree::map::entry::VacantEntry<K,V>::insert
+ 0.0%   0.0%     736B            quinn_udp std::net::each_addr
+ 0.0%   0.0%     713B          quinn_proto hashbrown::map::HashMap<K,V,S,A>::insert
+ 0.0%   0.0%     709B          quinn_proto alloc::collections::binary_heap::PeekMut<T>::pop
+ 0.0%   0.0%     707B                  std core::ptr::drop_in_place<quinn_proto::endpoint::Endpoint>
+ 0.0%   0.0%     707B                  std core::ptr::drop_in_place<quinn_proto::endpoint::Endpoint>
+ 0.0%   0.0%     707B                  std core::ptr::drop_in_place<quinn_proto::endpoint::Endpoint>
+ 0.0%   0.0%     707B                  std core::ptr::drop_in_place<quinn_proto::endpoint::Endpoint>
+ 0.0%   0.0%     707B                  std core::ptr::drop_in_place<quinn_proto::endpoint::Endpoint>
+ 0.0%   0.0%     702B          quinn_proto quinn_proto::connection::spaces::PacketSpace::new
+ 0.0%   0.0%     702B          quinn_proto quinn_proto::connection::cid_state::CidState::new_cids
+ 0.0%   0.0%     692B          quinn_proto quinn_proto::connection::streams::send::Send::write
+ 0.0%   0.0%     692B          quinn_proto <quinn_proto::frame::Type as core::fmt::Debug>::fmt
+ 0.0%   0.0%     692B          quinn_proto quinn_proto::connection::spaces::PacketSpace::maybe_queue_probe
+ 0.0%   0.0%     680B                quinn <futures_channel::mpsc::UnboundedReceiver<T> as core::ops::drop::Drop>::drop
+ 0.0%   0.0%     667B          quinn_proto <hashbrown::raw::RawTable<T,A> as core::ops::drop::Drop>::drop
+ 0.0%   0.0%     662B          quinn_proto <quinn_proto::frame::Type as core::fmt::Display>::fmt
+ 0.0%   0.0%     658B          quinn_proto <quinn_proto::transport_error::Code as core::fmt::Display>::fmt
+ 0.0%   0.0%     656B          quinn_proto quinn_proto::packet::PartialDecode::decrypt_header
+ 0.0%   0.0%     652B          quinn_proto alloc::collections::btree::map::BTreeMap<K,V>::insert
+ 0.0%   0.0%     648B          quinn_proto quinn_proto::connection::streams::SendStream::reset
+ 0.0%   0.0%     633B          quinn_proto quinn_proto::frame::Ack::encode
+ 0.0%   0.0%     626B          quinn_proto <hashbrown::raw::RawTable<T,A> as core::ops::drop::Drop>::drop
+ 0.0%   0.0%     620B          quinn_proto <alloc::collections::vec_deque::VecDeque<T,A> as core::ops::drop::Drop>::drop
+ 0.0%   0.0%     620B                quinn <alloc::collections::vec_deque::VecDeque<T,A> as core::ops::drop::Drop>::drop
+ 0.0%   0.0%     619B          quinn_proto <quinn_proto::congestion::cubic::Cubic as quinn_proto::congestion::Controlle...
+ 0.0%   0.0%     617B          quinn_proto <&T as core::fmt::Debug>::fmt
+ 0.0%   0.0%     614B                quinn tokio::runtime::task::list::OwnedTasks<S>::bind
+ 0.0%   0.0%     614B                quinn tokio::runtime::task::list::OwnedTasks<S>::bind
+ 0.0%   0.0%     611B          quinn_proto <hashbrown::map::HashMap<K,V,S,A> as core::iter::traits::collect::Extend<(K,...
+ 0.0%   0.0%     602B          quinn_proto alloc::collections::btree::remove::<impl alloc::collections::btree::node::Ha...
+ 0.0%   0.0%     599B                quinn futures_channel::oneshot::Sender<T>::send
+ 0.0%   0.0%     598B          quinn_proto quinn_proto::connection::packet_builder::PacketBuilder::finish_and_track
+ 0.0%   0.0%     597B          quinn_proto quinn_proto::connection::Connection::kill
+ 0.0%   0.0%     597B                quinn alloc::sync::Arc<T>::drop_slow
+ 0.0%   0.0%     595B                quinn tokio::runtime::task::list::OwnedTasks<S>::bind
+ 0.0%   0.0%     595B                quinn tokio::runtime::task::list::OwnedTasks<S>::bind
+ 0.0%   0.0%     593B                quinn <alloc::collections::btree::map::BTreeMap<K,V> as core::ops::drop::Drop>::drop
+ 0.0%   0.0%     589B          quinn_proto quinn_proto::connection::streams::state::StreamsState::poll
+ 0.0%   0.0%     584B          quinn_proto quinn_proto::connection::spaces::Retransmits::is_empty
+ 0.0%   0.0%     580B          quinn_proto quinn_proto::connection::send_buffer::SendBuffer::poll_transmit
+ 0.0%   0.0%     572B          quinn_proto <alloc::collections::btree::map::Iter<K,V> as core::iter::traits::iterator::...
+ 0.0%   0.0%     572B          quinn_proto quinn_proto::connection::assembler::Assembler::read
+ 0.0%   0.0%     569B          quinn_proto quinn_proto::connection::cid_state::CidState::new
+ 0.0%   0.0%     562B          quinn_proto <quinn_proto::transport_error::Code as core::fmt::Debug>::fmt
+ 0.0%   0.0%     559B                quinn futures_util::stream::stream::StreamExt::poll_next_unpin
+ 0.0%   0.0%     556B                quinn futures_channel::mpsc::queue::Queue<T>::pop_spin
+ 0.0%   0.0%     556B          quinn_proto tinyvec::tinyvec::TinyVec<A>::push::drain_to_heap_and_push
+ 0.0%   0.0%     547B                quinn <quinn::endpoint::Incoming as futures_core::stream::Stream>::poll_next
+ 0.0%   0.0%     541B          quinn_proto quinn_proto::connection::streams::state::StreamsState::new
+ 0.0%   0.0%     537B                  std core::ptr::drop_in_place<quinn_proto::connection::spaces::PacketSpace>
+ 0.0%   0.0%     537B                  std core::ptr::drop_in_place<quinn_proto::connection::spaces::PacketSpace>
+ 0.0%   0.0%     537B                  std core::ptr::drop_in_place<quinn_proto::connection::spaces::PacketSpace>
+ 0.0%   0.0%     537B                  std core::ptr::drop_in_place<quinn_proto::connection::spaces::PacketSpace>
+ 0.0%   0.0%     537B                  std core::ptr::drop_in_place<quinn_proto::connection::spaces::PacketSpace>
+ 0.0%   0.0%     537B                  std core::ptr::drop_in_place<quinn_proto::connection::spaces::PacketSpace>
+ 0.0%   0.0%     533B          quinn_proto <quinn_proto::varint::VarInt as quinn_proto::coding::Codec>::decode
+ 0.0%   0.0%     533B          quinn_proto <quinn_proto::varint::VarInt as quinn_proto::coding::Codec>::decode
+ 0.0%   0.0%     533B          quinn_proto <T as quinn_proto::coding::BufExt>::get_var
+ 0.0%   0.0%     528B          quinn_proto alloc::collections::btree::map::IntoIter<K,V>::dying_next
+ 0.0%   0.0%     528B          quinn_proto alloc::collections::btree::map::IntoIter<K,V>::dying_next
+ 0.0%   0.0%     524B          quinn_proto quinn_proto::connection::streams::state::StreamsState::received_stop_sending
+ 0.0%   0.0%     524B                quinn <tokio::io::async_fd::AsyncFd<T> as core::ops::drop::Drop>::drop
+ 0.0%   0.0%     521B                  std core::ptr::drop_in_place<quinn_proto::connection::spaces::PacketSpace>
+ 0.0%   0.0%     521B                  std core::ptr::drop_in_place<quinn_proto::connection::spaces::PacketSpace>
+ 0.0%   0.0%     513B                quinn futures_channel::mpsc::UnboundedSender<T>::unbounded_send
+ 0.0%   0.0%     511B                quinn futures_channel::mpsc::queue::Queue<T>::pop_spin
+ 0.0%   0.0%     509B          quinn_proto quinn_proto::connection::streams::state::StreamsState::set_params
+ 0.0%   0.0%     508B                quinn <quinn::send_stream::SendStream as core::ops::drop::Drop>::drop
+ 0.0%   0.0%     504B          quinn_proto <quinn_proto::crypto::rustls::TlsSession as quinn_proto::crypto::Session>::p...
+ 0.0%   0.0%     503B          quinn_proto hashbrown::raw::RawTable<T,A>::remove_entry
+ 0.0%   0.0%     501B          quinn_proto quinn_proto::connection::Connection::update_keys
+ 0.0%   0.0%     496B          quinn_proto <alloc::collections::btree::map::Range<K,V> as core::iter::traits::double_en...
+ 0.0%   0.0%     492B          quinn_proto alloc::collections::binary_heap::BinaryHeap<T>::sift_down_range
+ 0.0%   0.0%     490B          quinn_proto hashbrown::raw::RawTable<T,A>::remove_entry
+ 0.0%   0.0%     490B                quinn <hashbrown::raw::RawDrain<T,A> as core::ops::drop::Drop>::drop
+ 0.0%   0.0%     486B          quinn_proto quinn_proto::connection::Connection::reset_idle_timeout
+ 0.0%   0.0%     484B          quinn_proto quinn_proto::connection::datagrams::DatagramState::write
+ 0.0%   0.0%     479B          quinn_proto quinn_proto::connection::Connection::on_packet_authenticated
+ 0.0%   0.0%     475B                quinn <hashbrown::raw::RawTable<T,A> as core::ops::drop::Drop>::drop
+ 0.0%   0.0%     470B          quinn_proto alloc::sync::Arc<T>::drop_slow
+ 0.0%   0.0%     469B          quinn_proto quinn_proto::connection::paths::RttEstimator::update
+ 0.0%   0.0%     468B          quinn_proto <quinn_proto::crypto::rustls::TlsSession as quinn_proto::crypto::Session>::w...
+ 0.0%   0.0%     467B          quinn_proto <hashbrown::map::HashMap<K,V,S,A> as core::iter::traits::collect::Extend<(K,...
+ 0.0%   0.0%     466B                quinn <quinn::connection::ConnectionRef as core::ops::drop::Drop>::drop
+ 0.0%   0.0%     465B                quinn <hashbrown::raw::RawTable<T,A> as core::ops::drop::Drop>::drop
+ 0.0%   0.0%     459B          quinn_proto quinn_proto::connection::paths::PathData::from_previous
+ 0.0%   0.0%     459B          quinn_proto core::array::<impl core::fmt::Debug for [T; N]>::fmt
+ 0.0%   0.0%     457B          quinn_proto <quinn_proto::range_set::btree_range_set::Replace as core::ops::drop::Drop>:...
+ 0.0%   0.0%     446B          quinn_proto <alloc::collections::btree::map::Range<K,V> as core::iter::traits::iterator:...
+ 0.0%   0.0%     446B          quinn_proto quinn_proto::frame::ConnectionClose::encode
+ 0.0%   0.0%     445B          quinn_proto quinn_proto::connection::Connection::set_key_discard_timer
+ 0.0%   0.0%     440B          quinn_proto <quinn_proto::connection::ConnectionError as core::fmt::Display>::fmt
+ 0.0%   0.0%     435B          quinn_proto quinn_proto::range_set::btree_range_set::RangeSet::replace
+ 0.0%   0.0%     434B          quinn_proto quinn_proto::connection::streams::state::StreamsState::retransmit
+ 0.0%   0.0%     433B          quinn_proto quinn_proto::connection::streams::recv::Recv::reset
+ 0.0%   0.0%     432B          quinn_proto quinn_proto::connection::streams::SendStream::finish
+ 0.0%   0.0%     430B          quinn_proto quinn_proto::connection::assembler::Assembler::ensure_ordering
+ 0.0%   0.0%     430B            quinn_udp quinn_udp::imp::UdpSocket::poll_send
+ 0.0%   0.0%     427B          quinn_proto <alloc::collections::btree::map::Range<K,V> as core::iter::traits::iterator:...
+ 0.0%   0.0%     426B          quinn_proto alloc::collections::btree::navigate::<impl alloc::collections::btree::node::...
+ 0.0%   0.0%     426B          quinn_proto alloc::collections::btree::navigate::<impl alloc::collections::btree::node::...
+ 0.0%   0.0%     426B                quinn alloc::collections::btree::navigate::<impl alloc::collections::btree::node::...
+ 0.0%   0.0%     426B                quinn alloc::collections::btree::navigate::<impl alloc::collections::btree::node::...
+ 0.0%   0.0%     425B          quinn_proto <quinn_proto::range_set::array_range_set::ArrayRangeSet as core::clone::Clon...
+ 0.0%   0.0%     424B          quinn_proto <quinn_proto::varint::VarInt as quinn_proto::coding::Codec>::encode
+ 0.0%   0.0%     420B            quinn_udp tokio::io::async_fd::AsyncFdReadyGuard<Inner>::try_io
+ 0.0%   0.0%     419B          quinn_proto <alloc::vec::drain::Drain<T,A> as core::ops::drop::Drop>::drop
+ 0.0%   0.0%     418B          quinn_proto <quinn_proto::config::EndpointConfig as core::default::Default>::default
+ 0.0%   0.0%     417B          quinn_proto hashbrown::map::HashMap<K,V,S,A>::remove
+ 0.0%   0.0%     415B          quinn_proto <quinn_proto::range_set::btree_range_set::Replace as core::iter::traits::ite...
+ 0.0%   0.0%     415B                quinn <alloc::collections::vec_deque::VecDeque<T,A> as core::ops::drop::Drop>::drop

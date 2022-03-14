@@ -1,0 +1,407 @@
+ 0.2%   0.5%  20.9KiB               rustls rustls::server::tls13::client_hello::CompleteClientHelloHandling::handle_cli...
+ 0.1%   0.3%  12.2KiB               rustls rustls::server::tls12::client_hello::CompleteClientHelloHandling::handle_cli...
+ 0.1%   0.2%   6.5KiB               rustls rustls::server::hs::ExpectClientHello::with_certified_key
+ 0.0%   0.1%   5.4KiB               rustls <rustls::server::tls13::ExpectFinished as rustls::conn::State<rustls::server...
+ 0.0%   0.1%   4.6KiB               rustls <rustls::msgs::enums::CipherSuite as core::fmt::Debug>::fmt
+ 0.0%   0.1%   4.2KiB               rustls rustls::server::hs::ExtensionProcessing::process_common
+ 0.0%   0.1%   3.8KiB               rustls rustls::msgs::handshake::HandshakeMessagePayload::read_version
+ 0.0%   0.1%   3.5KiB               rustls rustls::server::hs::process_client_hello
+ 0.0%   0.1%   3.2KiB               rustls <rustls::server::tls12::ExpectClientKx as rustls::conn::State<rustls::server...
+ 0.0%   0.1%   2.8KiB               rustls <rustls::server::tls12::ExpectCertificate as rustls::conn::State<rustls::ser...
+ 0.0%   0.1%   2.8KiB               rustls <rustls::msgs::handshake::ClientExtension as rustls::msgs::codec::Codec>::read
+ 0.0%   0.1%   2.8KiB               rustls <rustls::msgs::handshake::HandshakeMessagePayload as rustls::msgs::codec::Co...
+ 0.0%   0.1%   2.6KiB               rustls <rustls::server::tls13::ExpectCertificate as rustls::conn::State<rustls::ser...
+ 0.0%   0.1%   2.6KiB               rustls <rustls::server::tls12::ExpectFinished as rustls::conn::State<rustls::server...
+ 0.0%   0.1%   2.5KiB               rustls <rustls::server::tls13::ExpectTraffic as rustls::conn::State<rustls::server:...
+ 0.0%   0.1%   2.1KiB               rustls <rustls::msgs::enums::CipherSuite as core::convert::From<u16>>::from
+ 0.0%   0.0%   2.0KiB               rustls <rustls::server::tls12::ExpectCertificateVerify as rustls::conn::State<rustl...
+ 0.0%   0.0%   1.9KiB               rustls rustls::quic::Keys::new
+ 0.0%   0.0%   1.8KiB               rustls <rustls::msgs::persist::ServerSessionValue as rustls::msgs::codec::Codec>::read
+ 0.0%   0.0%   1.7KiB               rustls <rustls::server::tls13::ExpectCertificateVerify as rustls::conn::State<rustl...
+ 0.0%   0.0%   1.6KiB               rustls <rustls::msgs::handshake::ServerExtension as rustls::msgs::codec::Codec>::read
+ 0.0%   0.0%   1.6KiB               rustls hashbrown::raw::RawTable<T,A>::reserve_rehash
+ 0.0%   0.0%   1.5KiB               rustls rustls::conn::CommonState::send_appdata_encrypt
+ 0.0%   0.0%   1.5KiB               rustls rustls::conn::CommonState::send_msg_encrypt
+ 0.0%   0.0%   1.4KiB               rustls rustls::quic::Secrets::next_packet_keys
+ 0.0%   0.0%   1.4KiB          quinn_proto quinn_proto::crypto::rustls::<impl quinn_proto::crypto::ServerConfig for rus...
+ 0.0%   0.0%   1.4KiB               rustls rustls::tls13::key_schedule::KeyScheduleHandshake::into_traffic_with_client_...
+ 0.0%   0.0%   1.4KiB               rustls rustls::msgs::enums::CipherSuite::get_u16
+ 0.0%   0.0%   1.4KiB               rustls alloc::str::join_generic_copy
+ 0.0%   0.0%   1.4KiB          quinn_proto core::ptr::drop_in_place<rustls::msgs::message::Message>
+ 0.0%   0.0%   1.3KiB               rustls <rustls::msgs::handshake::ClientHelloPayload as rustls::msgs::codec::Codec>:...
+ 0.0%   0.0%   1.3KiB                  std core::ptr::drop_in_place<rustls::msgs::message::MessagePayload>
+ 0.0%   0.0%   1.3KiB               rustls core::ptr::drop_in_place<rustls::msgs::message::Message>
+ 0.0%   0.0%   1.3KiB               rustls core::ptr::drop_in_place<rustls::msgs::message::Message>
+ 0.0%   0.0%   1.3KiB               rustls rustls::conn::CommonState::send_msg
+ 0.0%   0.0%   1.3KiB               rustls <rustls::msgs::persist::ServerSessionValue as rustls::msgs::codec::Codec>::e...
+ 0.0%   0.0%   1.3KiB               rustls core::ptr::drop_in_place<rustls::msgs::handshake::HandshakePayload>
+ 0.0%   0.0%   1.3KiB               rustls core::ptr::drop_in_place<rustls::msgs::handshake::HandshakeMessagePayload>
+ 0.0%   0.0%   1.2KiB               rustls <rustls::tls12::cipher::ChaCha20Poly1305MessageEncrypter as rustls::cipher::...
+ 0.0%   0.0%   1.2KiB               rustls <rustls::error::Error as core::fmt::Display>::fmt
+ 0.0%   0.0%   1.2KiB               rustls <rustls::tls12::cipher::GcmMessageEncrypter as rustls::cipher::MessageEncryp...
+ 0.0%   0.0%   1.2KiB               rustls rustls::tls12::ConnectionSecrets::make_cipher_pair
+ 0.0%   0.0%   1.1KiB               rustls core::ptr::drop_in_place<rustls::msgs::handshake::HandshakeMessagePayload>
+ 0.0%   0.0%   1.1KiB               rustls <rustls::msgs::handshake::ClientExtension as rustls::msgs::codec::Codec>::en...
+ 0.0%   0.0%   1.1KiB               rustls <alloc::vec::Vec<T> as alloc::vec::spec_from_iter::SpecFromIter<T,I>>::from_...
+ 0.0%   0.0%   1.1KiB               rustls <rustls::server::handy::ServerSessionMemoryCache as rustls::server::server_c...
+ 0.0%   0.0%   1.0KiB               rustls rustls::tls13::key_schedule::KeySchedule::derive_logged_secret
+ 0.0%   0.0%   1.0KiB               rustls rustls::server::tls12::client_hello::emit_server_hello
+ 0.0%   0.0%   1.0KiB               rustls <rustls::msgs::handshake::ServerExtension as rustls::msgs::codec::Codec>::en...
+ 0.0%   0.0%   1.0KiB               rustls <rustls::tls13::Tls13MessageEncrypter as rustls::cipher::MessageEncrypter>::...
+ 0.0%   0.0%   1.0KiB               rustls rustls::verify::verify_signed_struct
+ 0.0%   0.0%   1.0KiB               rustls rustls::quic::write_hs
+ 0.0%   0.0%    1017B               rustls <rustls::server::server_conn::ServerConnection as rustls::quic::QuicExt>::ze...
+ 0.0%   0.0%    1017B                  std core::ptr::drop_in_place<quinn_proto::crypto::rustls::TlsSession>
+ 0.0%   0.0%    1013B               rustls <rustls::server::tls12::ExpectCcs as rustls::conn::State<rustls::server::ser...
+ 0.0%   0.0%    1011B               rustls <rustls::client::client_conn::ClientConnection as rustls::quic::QuicExt>::ze...
+ 0.0%   0.0%     999B               rustls rustls::conn::ConnectionCommon<Data>::read_quic_hs
+ 0.0%   0.0%     999B               rustls rustls::conn::ConnectionCommon<Data>::read_quic_hs
+ 0.0%   0.0%     991B               rustls <rustls::msgs::handshake::HelloRetryExtension as rustls::msgs::codec::Codec>...
+ 0.0%   0.0%     984B               rustls <rustls::msgs::handshake::ServerHelloPayload as rustls::msgs::codec::Codec>:...
+ 0.0%   0.0%     965B               rustls core::ptr::drop_in_place<rustls::msgs::handshake::ClientExtension>
+ 0.0%   0.0%     965B               rustls core::ptr::drop_in_place<rustls::msgs::handshake::ClientExtension>
+ 0.0%   0.0%     965B                  std core::ptr::drop_in_place<rustls::msgs::handshake::ClientExtension>
+ 0.0%   0.0%     957B          quinn_proto quinn_proto::crypto::rustls::<impl quinn_proto::crypto::ServerConfig for rus...
+ 0.0%   0.0%     955B               rustls rustls::msgs::hsjoiner::HandshakeJoiner::take_message
+ 0.0%   0.0%     943B               rustls <alloc::vec::Vec<T> as alloc::vec::spec_from_iter::SpecFromIter<T,I>>::from_...
+ 0.0%   0.0%     938B               rustls hashbrown::rustc_entry::<impl hashbrown::map::HashMap<K,V,S,A>>::rustc_entry
+ 0.0%   0.0%     923B               rustls <rustls::msgs::handshake::HandshakePayload as core::fmt::Debug>::fmt
+ 0.0%   0.0%     912B               rustls <alloc::collections::vec_deque::iter::Iter<T> as core::iter::traits::iterato...
+ 0.0%   0.0%     911B               rustls rustls::verify::verify_tls13
+ 0.0%   0.0%     902B               rustls core::array::<impl core::fmt::Debug for [T; N]>::fmt
+ 0.0%   0.0%     881B               rustls rustls::server::server_conn::ServerConnection::from_config
+ 0.0%   0.0%     851B               rustls <rustls::tls12::cipher::ChaCha20Poly1305MessageDecrypter as rustls::cipher::...
+ 0.0%   0.0%     838B               rustls rustls::conn::CommonState::process_main_protocol
+ 0.0%   0.0%     838B               rustls rustls::conn::CommonState::process_main_protocol
+ 0.0%   0.0%     834B               rustls rustls::msgs::codec::read_vec_u16
+ 0.0%   0.0%     830B               rustls rustls::tls12::prf::prf
+ 0.0%   0.0%     820B               rustls <rustls::error::Error as core::fmt::Debug>::fmt
+ 0.0%   0.0%     810B          quinn_proto <quinn_proto::crypto::rustls::TlsSession as quinn_proto::crypto::Session>::i...
+ 0.0%   0.0%     808B               rustls <rustls::msgs::handshake::CertReqExtension as rustls::msgs::codec::Codec>::read
+ 0.0%   0.0%     808B               rustls <rustls::server::handy::ServerSessionMemoryCache as rustls::server::server_c...
+ 0.0%   0.0%     805B               rustls <rustls::msgs::handshake::ClientExtension as core::fmt::Debug>::fmt
+ 0.0%   0.0%     781B          quinn_proto <quinn_proto::crypto::rustls::TlsSession as quinn_proto::crypto::Session>::r...
+ 0.0%   0.0%     774B               rustls <rustls::msgs::handshake::CertificateExtension as rustls::msgs::codec::Codec...
+ 0.0%   0.0%     752B               rustls rustls::msgs::codec::read_vec_u16
+ 0.0%   0.0%     735B               rustls rustls::conn::CommonState::new
+ 0.0%   0.0%     732B               rustls rustls::limited_cache::LimitedCache<K,V>::insert
+ 0.0%   0.0%     728B               rustls rustls::msgs::codec::read_vec_u16
+ 0.0%   0.0%     727B               rustls rustls::msgs::handshake::ClientHelloPayload::has_duplicate_extension
+ 0.0%   0.0%     718B               rustls <rustls::tls13::Tls13MessageDecrypter as rustls::cipher::MessageDecrypter>::...
+ 0.0%   0.0%     704B               rustls rustls::msgs::codec::read_vec_u24_limited
+ 0.0%   0.0%     702B               rustls rustls::tls13::Tls13CipherSuite::derive_decrypter
+ 0.0%   0.0%     702B               rustls rustls::tls13::Tls13CipherSuite::derive_encrypter
+ 0.0%   0.0%     700B                  std core::ptr::drop_in_place<rustls::conn::CommonState>
+ 0.0%   0.0%     699B               rustls rustls::msgs::codec::read_vec_u16
+ 0.0%   0.0%     699B               rustls rustls::msgs::codec::read_vec_u16
+ 0.0%   0.0%     695B               rustls <rustls::msgs::handshake::CertificateRequestPayload as rustls::msgs::codec::...
+ 0.0%   0.0%     693B               rustls <rustls::msgs::enums::ExtensionType as core::fmt::Debug>::fmt
+ 0.0%   0.0%     671B               rustls rustls::msgs::codec::read_vec_u16
+ 0.0%   0.0%     660B               rustls <rustls::msgs::handshake::HelloRetryExtension as rustls::msgs::codec::Codec>...
+ 0.0%   0.0%     655B               rustls hashbrown::map::HashMap<K,V,S,A>::insert
+ 0.0%   0.0%     655B               rustls rustls::msgs::codec::read_vec_u16
+ 0.0%   0.0%     654B               rustls hashbrown::map::HashMap<K,V,S,A>::insert
+ 0.0%   0.0%     640B               rustls <alloc::vec::Vec<T> as alloc::vec::spec_from_iter::SpecFromIter<T,I>>::from_...
+ 0.0%   0.0%     637B              rustls? <rustls::error::Error as core::clone::Clone>::clone
+ 0.0%   0.0%     633B               rustls rustls::server::handy::ServerSessionMemoryCache::new
+ 0.0%   0.0%     632B               rustls rustls::msgs::codec::read_vec_u24_limited
+ 0.0%   0.0%     630B               rustls <rustls::msgs::enums::AlertDescription as core::fmt::Debug>::fmt
+ 0.0%   0.0%     629B               rustls rustls::msgs::fragmenter::MessageFragmenter::fragment
+ 0.0%   0.0%     629B               rustls rustls::msgs::codec::read_vec_u8
+ 0.0%   0.0%     617B               rustls <rustls::msgs::handshake::ServerExtension as core::fmt::Debug>::fmt
+ 0.0%   0.0%     617B               rustls rustls::msgs::codec::read_vec_u16
+ 0.0%   0.0%     616B               rustls rustls::msgs::codec::read_vec_u16
+ 0.0%   0.0%     616B               rustls rustls::msgs::codec::read_vec_u16
+ 0.0%   0.0%     597B               rustls rustls::tls13::key_schedule::KeyScheduleTraffic::export_keying_material
+ 0.0%   0.0%     593B               rustls rustls::tls13::key_schedule::KeyScheduleHandshakeStart::derive_handshake_sec...
+ 0.0%   0.0%     589B               rustls <rustls::msgs::handshake::ServerName as rustls::msgs::codec::Codec>::read
+ 0.0%   0.0%     586B               rustls core::ptr::drop_in_place<rustls::conn::CommonState>
+ 0.0%   0.0%     586B               rustls rustls::conn::CommonState::start_traffic
+ 0.0%   0.0%     586B               rustls core::ptr::drop_in_place<rustls::conn::CommonState>
+ 0.0%   0.0%     585B               rustls rustls::server::tls12::emit_finished
+ 0.0%   0.0%     584B               rustls rustls::msgs::codec::read_vec_u16
+ 0.0%   0.0%     584B               rustls rustls::msgs::codec::read_vec_u16
+ 0.0%   0.0%     582B               rustls <rustls::tls12::cipher::GcmMessageDecrypter as rustls::cipher::MessageDecryp...
+ 0.0%   0.0%     576B               rustls <rustls::msgs::handshake::HelloRetryRequest as rustls::msgs::codec::Codec>::...
+ 0.0%   0.0%     568B               rustls <rustls::bs_debug::BsDebug as core::fmt::Debug>::fmt
+ 0.0%   0.0%     567B               rustls rustls::server::tls12::get_server_connection_value_tls12
+ 0.0%   0.0%     556B               rustls <rustls::msgs::handshake::ServerHelloPayload as rustls::msgs::codec::Codec>:...
+ 0.0%   0.0%     556B               rustls rustls::server::hs::ExtensionProcessing::process_tls12
+ 0.0%   0.0%     541B               rustls rustls::conn::ConnectionCommon<Data>::new
+ 0.0%   0.0%     540B               rustls <rustls::msgs::handshake::NewSessionTicketPayloadTLS13 as rustls::msgs::code...
+ 0.0%   0.0%     539B               rustls <rustls::msgs::handshake::CertificateExtension as rustls::msgs::codec::Codec...
+ 0.0%   0.0%     522B               rustls <rustls::msgs::handshake::HelloRetryRequest as rustls::msgs::codec::Codec>::...
+ 0.0%   0.0%     520B               rustls rustls::check::check_message
+ 0.0%   0.0%     519B               rustls rustls::msgs::codec::encode_vec_u16
+ 0.0%   0.0%     514B               rustls rustls::tls13::key_schedule::KeyScheduleTraffic::resumption_master_secret_an...
+ 0.0%   0.0%     510B               rustls rustls::quic::PacketKey::encrypt_in_place
+ 0.0%   0.0%     507B               rustls rustls::msgs::handshake::ClientHelloPayload::has_keyshare_extension_with_dup...
+ 0.0%   0.0%     507B               rustls <rustls::sign::RsaSigningKey as rustls::sign::SigningKey>::choose_scheme
+ 0.0%   0.0%     504B          quinn_proto <quinn_proto::crypto::rustls::TlsSession as quinn_proto::crypto::Session>::p...
+ 0.0%   0.0%     502B               rustls rustls::hash_hs::HandshakeHash::rollup_for_hrr
+ 0.0%   0.0%     501B               rustls rustls::msgs::codec::read_vec_u16
+ 0.0%   0.0%     491B               rustls <rustls::sign::EcdsaSigner as rustls::sign::Signer>::sign
+ 0.0%   0.0%     490B               rustls rustls::msgs::codec::read_vec_u8
+ 0.0%   0.0%     489B               rustls rustls::msgs::codec::read_vec_u16
+ 0.0%   0.0%     489B               rustls hashbrown::raw::RawTable<T,A>::remove_entry
+ 0.0%   0.0%     488B               rustls <rustls::msgs::handshake::CertificateStatusRequest as rustls::msgs::codec::C...
+ 0.0%   0.0%     485B               rustls rustls::msgs::codec::encode_vec_u24
+ 0.0%   0.0%     485B               rustls rustls::msgs::codec::encode_vec_u16
+ 0.0%   0.0%     477B               rustls rustls::tls13::key_schedule::KeySchedule::input_secret
+ 0.0%   0.0%     476B               rustls <rustls::msgs::handshake::NewSessionTicketExtension as rustls::msgs::codec::...
+ 0.0%   0.0%     475B               rustls rustls::msgs::message::OpaqueMessage::encode
+ 0.0%   0.0%     474B               rustls alloc::sync::Arc<T>::drop_slow
+ 0.0%   0.0%     469B               rustls hashbrown::raw::RawTable<T,A>::remove_entry
+ 0.0%   0.0%     468B          quinn_proto <quinn_proto::crypto::rustls::TlsSession as quinn_proto::crypto::Session>::w...
+ 0.0%   0.0%     467B               rustls <alloc::vec::Vec<T> as alloc::vec::spec_from_iter::SpecFromIter<T,I>>::from_...
+ 0.0%   0.0%     467B               rustls rustls::tls12::ConnectionSecrets::export_keying_material
+ 0.0%   0.0%     459B               rustls rustls::server::tls12::emit_ticket
+ 0.0%   0.0%     456B               rustls rustls::msgs::codec::read_vec_u8
+ 0.0%   0.0%     455B               rustls <alloc::vec::Vec<T> as alloc::vec::spec_from_iter::SpecFromIter<T,I>>::from_...
+ 0.0%   0.0%     455B               rustls <alloc::vec::Vec<T> as alloc::vec::spec_from_iter::SpecFromIter<T,I>>::from_...
+ 0.0%   0.0%     455B               rustls rustls::msgs::codec::encode_vec_u24
+ 0.0%   0.0%     453B               rustls rustls::server::builder::<impl rustls::builder::ConfigBuilder<rustls::server...
+ 0.0%   0.0%     453B               rustls <rustls::server::tls12::ExpectTraffic as rustls::conn::State<rustls::server:...
+ 0.0%   0.0%     453B               rustls <rustls::server::hs::ExpectClientHello as rustls::conn::State<rustls::server...
+ 0.0%   0.0%     451B               rustls rustls::msgs::codec::encode_vec_u16
+ 0.0%   0.0%     449B               rustls rustls::msgs::codec::encode_vec_u8
+ 0.0%   0.0%     448B               rustls alloc::sync::Arc<T>::drop_slow
+ 0.0%   0.0%     448B               rustls rustls::server::builder::<impl rustls::builder::ConfigBuilder<rustls::server...
+ 0.0%   0.0%     440B               rustls <rustls::msgs::handshake::ClientHelloPayload as rustls::msgs::codec::Codec>:...
+ 0.0%   0.0%     440B               rustls rustls::msgs::codec::encode_vec_u8
+ 0.0%   0.0%     437B               rustls rustls::msgs::codec::encode_vec_u16
+ 0.0%   0.0%     420B               rustls rustls::server::server_conn::ClientHello::new
+ 0.0%   0.0%     415B               rustls <rustls::server::tls13::ExpectTraffic as rustls::conn::State<rustls::server:...
+ 0.0%   0.0%     411B               rustls rustls::tls13::key_schedule::KeySchedule::sign_verify_data
+ 0.0%   0.0%     403B               rustls rustls::msgs::codec::encode_vec_u8
+ 0.0%   0.0%     403B               rustls <rustls::msgs::enums::HandshakeType as core::fmt::Debug>::fmt
+ 0.0%   0.0%     402B                  std core::ptr::drop_in_place<rustls::server::server_conn::ServerConfig>
+ 0.0%   0.0%     398B               rustls <alloc::vec::Vec<T,A> as core::clone::Clone>::clone
+ 0.0%   0.0%     398B               rustls alloc::slice::<impl alloc::borrow::ToOwned for [T]>::to_owned
+ 0.0%   0.0%     394B               rustls alloc::collections::vec_deque::VecDeque<T,A>::grow
+ 0.0%   0.0%     394B               rustls alloc::collections::vec_deque::VecDeque<T,A>::grow
+ 0.0%   0.0%     392B               rustls <rustls::msgs::handshake::CertReqExtension as rustls::msgs::codec::Codec>::e...
+ 0.0%   0.0%     392B               rustls rustls::msgs::codec::read_vec_u8
+ 0.0%   0.0%     390B               rustls <rustls::msgs::message::PlainMessage as core::convert::From<rustls::msgs::me...
+ 0.0%   0.0%     390B          quinn_proto <quinn_proto::crypto::rustls::TlsSession as quinn_proto::crypto::Session>::h...
+ 0.0%   0.0%     389B               rustls rustls::msgs::codec::read_vec_u8
+ 0.0%   0.0%     388B               rustls alloc::collections::vec_deque::VecDeque<T,A>::grow
+ 0.0%   0.0%     384B               rustls rustls::server::handy::AlwaysResolvesChain::new
+ 0.0%   0.0%     382B               rustls hashbrown::map::make_hash
+ 0.0%   0.0%     381B               rustls hashbrown::map::make_hash
+ 0.0%   0.0%     380B                  std core::ptr::drop_in_place<alloc::vec::Vec<rustls::msgs::handshake::CertReqExt...
+ 0.0%   0.0%     378B          quic_socket rustls::builder::ConfigBuilder<S,rustls::builder::WantsCipherSuites>::with_s...
+ 0.0%   0.0%     373B               rustls hashbrown::raw::RawTableInner<A>::fallible_with_capacity
+ 0.0%   0.0%     373B          quinn_proto quinn_proto::crypto::rustls::initial_keys
+ 0.0%   0.0%     371B               rustls <rustls::msgs::handshake::ServerECDHParams as rustls::msgs::codec::Codec>::e...
+ 0.0%   0.0%     369B               rustls rustls::tls12::decode_ecdh_params
+ 0.0%   0.0%     369B               rustls rustls::msgs::codec::encode_vec_u16
+ 0.0%   0.0%     368B               rustls <rustls::msgs::handshake::NewSessionTicketExtension as rustls::msgs::codec::...
+ 0.0%   0.0%     364B               rustls rustls::quic::PacketKey::decrypt_in_place
+ 0.0%   0.0%     362B               rustls alloc::collections::vec_deque::VecDeque<T,A>::grow
+ 0.0%   0.0%     359B               rustls rustls::msgs::codec::encode_vec_u8
+ 0.0%   0.0%     359B               rustls <rustls::msgs::alert::AlertMessagePayload as rustls::msgs::codec::Codec>::en...
+ 0.0%   0.0%     354B               rustls hashbrown::map::make_hash
+ 0.0%   0.0%     352B               rustls hashbrown::map::make_hash
+ 0.0%   0.0%     348B               rustls rustls::quic::HeaderProtectionKey::xor_in_place
+ 0.0%   0.0%     342B               rustls rustls::conn::CommonState::check_aligned_handshake
+ 0.0%   0.0%     341B               rustls rustls::msgs::codec::encode_vec_u8
+ 0.0%   0.0%     339B               rustls <rustls::sign::RsaSigner as rustls::sign::Signer>::sign
+ 0.0%   0.0%     339B               rustls rustls::tls13::key_schedule::hkdf_expand
+ 0.0%   0.0%     333B               rustls ring::agreement::agree_ephemeral_
+ 0.0%   0.0%     330B               rustls rustls::check::inappropriate_message
+ 0.0%   0.0%     328B                  std core::ptr::drop_in_place<alloc::vec::Vec<rustls::msgs::handshake::Certificat...
+ 0.0%   0.0%     325B               rustls rustls::sign::any_supported_type
+ 0.0%   0.0%     322B               rustls hashbrown::raw::RawTable<T,A>::insert
+ 0.0%   0.0%     319B               rustls <rustls::msgs::handshake::ServerHelloPayload as core::fmt::Debug>::fmt
+ 0.0%   0.0%     319B               rustls <rustls::msgs::handshake::ClientHelloPayload as core::fmt::Debug>::fmt
+ 0.0%   0.0%     318B               rustls <alloc::vec::Vec<rustls::msgs::base::PayloadU8> as rustls::msgs::handshake::...
+ 0.0%   0.0%     317B               rustls rustls::sign::any_ecdsa_type
+ 0.0%   0.0%     311B               rustls <rustls::server::handy::ServerSessionMemoryCache as rustls::server::server_c...
+ 0.0%   0.0%     308B               rustls alloc::sync::Arc<T>::drop_slow
+ 0.0%   0.0%     308B               rustls <hashbrown::raw::RawTable<T,A> as core::ops::drop::Drop>::drop
+ 0.0%   0.0%     307B               rustls <rustls::msgs::enums::SignatureScheme as rustls::msgs::codec::Codec>::read
+ 0.0%   0.0%     306B               rustls hashbrown::raw::RawTable<T,A>::insert
+ 0.0%   0.0%     303B               rustls rustls::msgs::handshake::CertificatePayloadTLS13::convert
+ 0.0%   0.0%     300B          quinn_proto <quinn_proto::crypto::rustls::TlsSession as quinn_proto::crypto::Session>::t...
+ 0.0%   0.0%     299B               rustls rustls::msgs::base::<impl rustls::msgs::codec::Codec for rustls::key::Certif...
+ 0.0%   0.0%     299B               rustls <rustls::msgs::base::PayloadU24 as rustls::msgs::codec::Codec>::read
+ 0.0%   0.0%     297B               rustls core::ptr::drop_in_place<rustls::msgs::handshake::ServerExtension>
+ 0.0%   0.0%     297B               rustls core::ptr::drop_in_place<rustls::msgs::handshake::ServerExtension>
+ 0.0%   0.0%     297B               rustls core::ptr::drop_in_place<rustls::msgs::handshake::ServerExtension>
+ 0.0%   0.0%     297B               rustls core::ptr::drop_in_place<rustls::msgs::handshake::ServerExtension>
+ 0.0%   0.0%     297B               rustls rustls::msgs::persist::ServerSessionValue::new
+ 0.0%   0.0%     297B               rustls core::ptr::drop_in_place<rustls::msgs::handshake::ServerExtension>
+ 0.0%   0.0%     297B                  std core::ptr::drop_in_place<rustls::msgs::handshake::ServerExtension>
+ 0.0%   0.0%     296B               rustls rustls::msgs::codec::encode_vec_u16
+ 0.0%   0.0%     296B               rustls rustls::msgs::codec::encode_vec_u16
+ 0.0%   0.0%     296B               rustls rustls::msgs::codec::encode_vec_u16
+ 0.0%   0.0%     296B               rustls rustls::msgs::codec::encode_vec_u16
+ 0.0%   0.0%     296B               rustls rustls::msgs::codec::encode_vec_u16
+ 0.0%   0.0%     294B               rustls <rustls::msgs::enums::SignatureScheme as core::fmt::Debug>::fmt
+ 0.0%   0.0%     293B                  std core::ptr::drop_in_place<rustls::server::hs::ExpectClientHello>
+ 0.0%   0.0%     293B                  std core::ptr::drop_in_place<rustls::server::hs::ExpectClientHello>
+ 0.0%   0.0%     293B                  std core::ptr::drop_in_place<rustls::server::hs::ExpectClientHello>
+ 0.0%   0.0%     288B               rustls rustls::conn::CommonState::start_encryption_tls12
+ 0.0%   0.0%     288B               rustls <rustls::msgs::base::PayloadU16 as rustls::msgs::codec::Codec>::read
+ 0.0%   0.0%     287B               rustls <alloc::vec::Vec<T,A> as core::ops::drop::Drop>::drop
+ 0.0%   0.0%     286B               rustls rustls::msgs::codec::encode_vec_u16
+ 0.0%   0.0%     286B               rustls rustls::msgs::codec::encode_vec_u16
+ 0.0%   0.0%     286B               rustls rustls::msgs::codec::encode_vec_u16
+ 0.0%   0.0%     286B               rustls rustls::msgs::codec::encode_vec_u16
+ 0.0%   0.0%     285B               rustls <rustls::msgs::handshake::KeyShareEntry as rustls::msgs::codec::Codec>::encode
+ 0.0%   0.0%     285B               rustls rustls::quic::Keys::initial
+ 0.0%   0.0%     280B               rustls rustls::suites::compatible_sigscheme_for_suites
+ 0.0%   0.0%     280B               rustls rustls::verify::construct_tls13_server_verify_message
+ 0.0%   0.0%     280B               rustls rustls::verify::construct_tls13_client_verify_message
+ 0.0%   0.0%     278B               rustls <alloc::vec::Vec<rustls::msgs::handshake::ServerName> as rustls::msgs::hands...
+ 0.0%   0.0%     277B               rustls rustls::versions::EnabledVersions::new
+ 0.0%   0.0%     276B               rustls <rustls::msgs::base::PayloadU8 as rustls::msgs::codec::Codec>::read
+ 0.0%   0.0%     270B               rustls <rustls::msgs::enums::ClientCertificateType as core::fmt::Debug>::fmt
+ 0.0%   0.0%     269B               rustls rustls::tls13::key_schedule::KeyScheduleNonSecret::new
+ 0.0%   0.0%     264B               rustls rustls::sign::any_eddsa_type
+ 0.0%   0.0%     263B               rustls <rustls::server::tls13::ExpectQuicTraffic as rustls::conn::State<rustls::ser...
+ 0.0%   0.0%     262B          quinn_proto <quinn_proto::crypto::rustls::TlsSession as quinn_proto::crypto::Session>::e...
+ 0.0%   0.0%     255B               rustls <alloc::vec::Vec<T,A> as core::ops::drop::Drop>::drop
+ 0.0%   0.0%     254B                  std core::ptr::drop_in_place<rustls::msgs::persist::ServerSessionValue>
+ 0.0%   0.0%     254B               rustls <alloc::collections::vec_deque::VecDeque<T,A> as core::ops::drop::Drop>::drop
+ 0.0%   0.0%     254B                  std core::ptr::drop_in_place<rustls::msgs::persist::ServerSessionValue>
+ 0.0%   0.0%     254B                  std core::ptr::drop_in_place<rustls::msgs::persist::ServerSessionValue>
+ 0.0%   0.0%     254B                  std core::ptr::drop_in_place<rustls::msgs::persist::ServerSessionValue>
+ 0.0%   0.0%     250B               rustls <rustls::msgs::handshake::ServerName as rustls::msgs::codec::Codec>::encode
+ 0.0%   0.0%     249B               rustls rustls::hash_hs::HandshakeHash::add_message
+ 0.0%   0.0%     247B                  std core::ptr::drop_in_place<rustls::server::tls12::ExpectCertificateVerify>
+ 0.0%   0.0%     246B               rustls <rustls::msgs::enums::NamedGroup as core::fmt::Debug>::fmt
+ 0.0%   0.0%     244B                  std core::ptr::drop_in_place<rustls::server::tls13::ExpectCertificateVerify>
+ 0.0%   0.0%     244B                  std core::ptr::drop_in_place<rustls::server::tls12::ExpectClientKx>
+ 0.0%   0.0%     244B                  std core::ptr::drop_in_place<rustls::server::tls12::ExpectClientKx>
+ 0.0%   0.0%     243B               rustls <rustls::msgs::enums::ExtensionType as rustls::msgs::codec::Codec>::encode
+ 0.0%   0.0%     242B               rustls <alloc::collections::vec_deque::VecDeque<T,A> as core::ops::drop::Drop>::drop
+ 0.0%   0.0%     241B               rustls <alloc::collections::vec_deque::VecDeque<T,A> as core::ops::drop::Drop>::drop
+ 0.0%   0.0%     240B          quinn_proto quinn_proto::crypto::rustls::<impl quinn_proto::crypto::HeaderKey for rustls...
+ 0.0%   0.0%     240B          quinn_proto quinn_proto::crypto::rustls::<impl quinn_proto::crypto::HeaderKey for rustls...
+ 0.0%   0.0%     237B               rustls <rustls::msgs::handshake::HelloRetryExtension as core::fmt::Debug>::fmt
+ 0.0%   0.0%     237B               rustls <&T as core::fmt::Debug>::fmt
+ 0.0%   0.0%     237B               rustls <rustls::msgs::message::MessagePayload as core::fmt::Debug>::fmt
+ 0.0%   0.0%     237B          quinn_proto quinn_proto::crypto::rustls::<impl quinn_proto::crypto::PacketKey for rustls...
+ 0.0%   0.0%     233B                  std core::ptr::drop_in_place<rustls::msgs::handshake::ClientHelloPayload>
+ 0.0%   0.0%     230B               rustls <rustls::msgs::handshake::PresharedKeyIdentity as rustls::msgs::codec::Codec...
+ 0.0%   0.0%     220B               rustls <alloc::vec::Vec<T,A> as core::ops::drop::Drop>::drop
+ 0.0%   0.0%     214B               rustls rustls::msgs::handshake::HandshakeMessagePayload::get_encoding_for_binder_si...
+ 0.0%   0.0%     210B               rustls <rustls::msgs::enums::ExtensionType as core::convert::From<u16>>::from
+ 0.0%   0.0%     208B               rustls rustls::server::builder::<impl rustls::builder::ConfigBuilder<rustls::server...
+ 0.0%   0.0%     208B               rustls alloc::raw_vec::RawVec<T,A>::reserve::do_reserve_and_handle
+ 0.0%   0.0%     208B               rustls alloc::raw_vec::RawVec<T,A>::reserve::do_reserve_and_handle
+ 0.0%   0.0%     208B               rustls alloc::raw_vec::RawVec<T,A>::reserve::do_reserve_and_handle
+ 0.0%   0.0%     202B               rustls core::ptr::drop_in_place<rustls::msgs::handshake::CertReqExtension>
+ 0.0%   0.0%     202B               rustls core::ptr::drop_in_place<rustls::msgs::handshake::CertReqExtension>
+ 0.0%   0.0%     202B               rustls hashbrown::raw::RawTable<T,A>::insert_no_grow
+ 0.0%   0.0%     200B               rustls <rustls::msgs::handshake::PresharedKeyIdentity as rustls::msgs::codec::Codec...
+ 0.0%   0.0%     199B               rustls <rustls::msgs::enums::ContentType as core::fmt::Debug>::fmt
+ 0.0%   0.0%     194B               rustls alloc::raw_vec::RawVec<T,A>::reserve::do_reserve_and_handle
+ 0.0%   0.0%     194B               rustls alloc::raw_vec::RawVec<T,A>::reserve::do_reserve_and_handle
+ 0.0%   0.0%     194B               rustls alloc::raw_vec::RawVec<T,A>::reserve::do_reserve_and_handle
+ 0.0%   0.0%     193B                  std core::ptr::drop_in_place<rustls::msgs::handshake::NewSessionTicketPayloadTLS13>
+ 0.0%   0.0%     192B               rustls <rustls::sign::Ed25519SigningKey as rustls::sign::SigningKey>::choose_scheme
+ 0.0%   0.0%     192B               rustls <rustls::sign::EcdsaSigningKey as rustls::sign::SigningKey>::choose_scheme
+ 0.0%   0.0%     191B               rustls alloc::raw_vec::RawVec<T,A>::reserve::do_reserve_and_handle
+ 0.0%   0.0%     190B                  std core::ptr::drop_in_place<alloc::vec::Vec<rustls::msgs::handshake::ServerName>>
+ 0.0%   0.0%     188B               rustls <rustls::msgs::enums::ProtocolVersion as core::fmt::Debug>::fmt
+ 0.0%   0.0%     185B               rustls <&T as core::fmt::Debug>::fmt
+ 0.0%   0.0%     185B          quinn_proto <quinn_proto::crypto::rustls::TlsSession as quinn_proto::crypto::Session>::n...
+ 0.0%   0.0%     179B               rustls rustls::msgs::message::MessagePayload::encode
+ 0.0%   0.0%     176B               rustls <rustls::msgs::handshake::CertReqExtension as core::fmt::Debug>::fmt
+ 0.0%   0.0%     176B               rustls <rustls::msgs::handshake::CertificateExtension as core::fmt::Debug>::fmt
+ 0.0%   0.0%     173B               rustls core::ptr::drop_in_place<rustls::msgs::handshake::CertificateExtension>
+ 0.0%   0.0%     173B               rustls core::ptr::drop_in_place<rustls::msgs::handshake::CertificateExtension>
+ 0.0%   0.0%     171B               rustls core::ptr::drop_in_place<alloc::vec::into_iter::IntoIter<rustls::msgs::hands...
+ 0.0%   0.0%     171B               rustls <rustls::msgs::enums::Compression as core::fmt::Debug>::fmt
+ 0.0%   0.0%     170B               rustls alloc::raw_vec::RawVec<T,A>::reserve::do_reserve_and_handle
+ 0.0%   0.0%     170B               rustls alloc::raw_vec::RawVec<T,A>::reserve::do_reserve_and_handle
+ 0.0%   0.0%     169B               rustls core::ptr::drop_in_place<alloc::vec::Vec<rustls::msgs::handshake::ServerExte...
+ 0.0%   0.0%     169B               rustls core::ptr::drop_in_place<alloc::vec::Vec<rustls::msgs::handshake::ServerExte...
+ 0.0%   0.0%     169B                  std core::ptr::drop_in_place<rustls::client::handy::ClientSessionMemoryCache>
+ 0.0%   0.0%     169B               rustls core::ptr::drop_in_place<alloc::vec::Vec<rustls::msgs::handshake::ServerExte...
+ 0.0%   0.0%     169B               rustls core::ptr::drop_in_place<alloc::vec::Vec<rustls::msgs::handshake::ServerExte...
+ 0.0%   0.0%     169B                  std core::ptr::drop_in_place<alloc::vec::Vec<rustls::msgs::handshake::ClientExte...
+ 0.0%   0.0%     167B               rustls <hashbrown::raw::RawIterHash<T,A> as core::iter::traits::iterator::Iterator>...
+ 0.0%   0.0%     166B               rustls <rustls::tls12::cipher::AesGcm as rustls::tls12::cipher::Tls12AeadAlgorithm>...
+ 0.0%   0.0%     164B               rustls core::ptr::drop_in_place<core::result::Result<alloc::boxed::Box<dyn rustls::...
+ 0.0%   0.0%     161B               rustls <rustls::msgs::enums::ECCurveType as core::fmt::Debug>::fmt
+ 0.0%   0.0%     161B               rustls <rustls::msgs::enums::ECPointFormat as core::fmt::Debug>::fmt
+ 0.0%   0.0%     154B               rustls <&T as core::fmt::Debug>::fmt
+ 0.0%   0.0%     154B               rustls <rustls::msgs::message::Message as core::fmt::Debug>::fmt
+ 0.0%   0.0%     151B               rustls <&T as core::fmt::Debug>::fmt
+ 0.0%   0.0%     151B               rustls <&T as core::fmt::Debug>::fmt
+ 0.0%   0.0%     151B               rustls <&T as core::fmt::Debug>::fmt
+ 0.0%   0.0%     151B               rustls <&T as core::fmt::Debug>::fmt
+ 0.0%   0.0%     151B               rustls <&T as core::fmt::Debug>::fmt
+ 0.0%   0.0%     151B               rustls alloc::raw_vec::RawVec<T,A>::reserve::do_reserve_and_handle
+ 0.0%   0.0%     149B                  std core::ptr::drop_in_place<rustls::record_layer::RecordLayer>
+ 0.0%   0.0%     149B                  std core::ptr::drop_in_place<rustls::record_layer::RecordLayer>
+ 0.0%   0.0%     148B                  std core::ptr::drop_in_place<alloc::collections::vec_deque::VecDeque<rustls::msg...
+ 0.0%   0.0%     147B          quinn_proto quinn_proto::crypto::rustls::<impl quinn_proto::crypto::PacketKey for rustls...
+ 0.0%   0.0%     146B               rustls <rustls::sign::Ed25519Signer as rustls::sign::Signer>::sign
+ 0.0%   0.0%     146B               rustls <rustls::msgs::enums::KeyUpdateRequest as core::fmt::Debug>::fmt
+ 0.0%   0.0%     146B               rustls <rustls::msgs::enums::PSKKeyExchangeMode as core::fmt::Debug>::fmt
+ 0.0%   0.0%     146B               rustls <rustls::msgs::enums::AlertLevel as core::fmt::Debug>::fmt
+ 0.0%   0.0%     145B                  std core::ptr::drop_in_place<rustls::msgs::handshake::HelloRetryRequest>
+ 0.0%   0.0%     144B                  std core::ptr::drop_in_place<alloc::vec::Vec<rustls::msgs::handshake::NewSession...
+ 0.0%   0.0%     144B                  std core::ptr::drop_in_place<alloc::vec::Vec<rustls::msgs::handshake::HelloRetry...
+ 0.0%   0.0%     142B               rustls <rustls::tls12::cipher::ChaCha20Poly1305 as rustls::tls12::cipher::Tls12Aead...
+ 0.0%   0.0%     142B               rustls <rustls::tls12::cipher::ChaCha20Poly1305 as rustls::tls12::cipher::Tls12Aead...
+ 0.0%   0.0%     136B               rustls core::ptr::drop_in_place<alloc::vec::Vec<rustls::key::Certificate>>
+ 0.0%   0.0%     136B               rustls core::ptr::drop_in_place<alloc::vec::Vec<alloc::string::String>>
+ 0.0%   0.0%     136B               rustls core::ptr::drop_in_place<alloc::vec::Vec<alloc::string::String>>
+ 0.0%   0.0%     136B               rustls core::ptr::drop_in_place<alloc::vec::Vec<rustls::msgs::base::PayloadU16>>
+ 0.0%   0.0%     136B               rustls core::ptr::drop_in_place<alloc::vec::Vec<rustls::key::Certificate>>
+ 0.0%   0.0%     136B                  std core::ptr::drop_in_place<core::option::Option<alloc::vec::Vec<rustls::key::C...
+ 0.0%   0.0%     136B               rustls core::ptr::drop_in_place<alloc::vec::Vec<rustls::key::Certificate>>
+ 0.0%   0.0%     136B                  std core::ptr::drop_in_place<core::option::Option<alloc::vec::Vec<rustls::key::C...
+ 0.0%   0.0%     136B               rustls core::ptr::drop_in_place<alloc::vec::Vec<rustls::key::Certificate>>
+ 0.0%   0.0%     136B                  std core::ptr::drop_in_place<core::option::Option<alloc::vec::Vec<rustls::key::C...
+ 0.0%   0.0%     136B               rustls core::ptr::drop_in_place<alloc::vec::Vec<rustls::key::Certificate>>
+ 0.0%   0.0%     136B                  std core::ptr::drop_in_place<alloc::vec::Vec<rustls::key::Certificate>>
+ 0.0%   0.0%     136B                  std core::ptr::drop_in_place<core::option::Option<alloc::vec::Vec<rustls::key::C...
+ 0.0%   0.0%     136B                  std core::ptr::drop_in_place<alloc::vec::Vec<rustls::key::Certificate>>
+ 0.0%   0.0%     134B               rustls <&T as core::fmt::Debug>::fmt
+ 0.0%   0.0%     134B               rustls <&T as core::fmt::Debug>::fmt
+ 0.0%   0.0%     133B               rustls <rustls::msgs::enums::HandshakeType as rustls::msgs::codec::Codec>::read
+ 0.0%   0.0%     132B               rustls <&T as core::fmt::Debug>::fmt
+ 0.0%   0.0%     131B               rustls alloc::raw_vec::RawVec<T,A>::allocate_in
+ 0.0%   0.0%     130B               rustls <alloc::vec::Vec<T,A> as core::fmt::Debug>::fmt
+ 0.0%   0.0%     130B               rustls <alloc::vec::Vec<T,A> as core::fmt::Debug>::fmt
+ 0.0%   0.0%     130B               rustls <&T as core::fmt::Debug>::fmt
+ 0.0%   0.0%     130B               rustls <&T as core::fmt::Debug>::fmt
+ 0.0%   0.0%     130B               rustls <&T as core::fmt::Debug>::fmt
+ 0.0%   0.0%     130B               rustls <&T as core::fmt::Debug>::fmt
+ 0.0%   0.0%     130B               rustls <&T as core::fmt::Debug>::fmt
+ 0.0%   0.0%     130B               rustls <&T as core::fmt::Debug>::fmt
+ 0.0%   0.0%     130B               rustls <&T as core::fmt::Debug>::fmt
+ 0.0%   0.0%     130B               rustls <&T as core::fmt::Debug>::fmt
+ 0.0%   0.0%     130B               rustls <&T as core::fmt::Debug>::fmt
+ 0.0%   0.0%     130B               rustls <&T as core::fmt::Debug>::fmt
+ 0.0%   0.0%     130B               rustls <&T as core::fmt::Debug>::fmt
+ 0.0%   0.0%     130B               rustls <&T as core::fmt::Debug>::fmt
+ 0.0%   0.0%     130B               rustls <&T as core::fmt::Debug>::fmt
+ 0.0%   0.0%     130B               rustls <&T as core::fmt::Debug>::fmt
+ 0.0%   0.0%     130B               rustls <&T as core::fmt::Debug>::fmt
+ 0.0%   0.0%     130B               rustls <&T as core::fmt::Debug>::fmt
+ 0.0%   0.0%     130B               rustls <&T as core::fmt::Debug>::fmt
+ 0.0%   0.0%     130B               rustls <&T as core::fmt::Debug>::fmt
+ 0.0%   0.0%     130B               rustls <&T as core::fmt::Debug>::fmt
+ 0.0%   0.0%     130B               rustls <&T as core::fmt::Debug>::fmt
+ 0.0%   0.0%     130B               rustls <&T as core::fmt::Debug>::fmt
+ 0.0%   0.0%     130B               rustls <&T as core::fmt::Debug>::fmt
+ 0.0%   0.0%     130B               rustls <&T as core::fmt::Debug>::fmt
+ 0.0%   0.0%     130B               rustls <&T as core::fmt::Debug>::fmt
+ 0.0%   0.0%     130B               rustls <&T as core::fmt::Debug>::fmt
+ 0.0%   0.0%     130B               rustls <&T as core::fmt::Debug>::fmt
+ 0.0%   0.0%     130B               rustls <&T as core::fmt::Debug>::fmt
+ 0.0%   0.0%     130B               rustls <&T as core::fmt::Debug>::fmt
+ 0.0%   0.0%     130B               rustls <&T as core::fmt::Debug>::fmt
+ 0.0%   0.0%     129B               rustls core::ptr::drop_in_place<alloc::vec::Vec<rustls::msgs::handshake::PresharedK...
+ 0.0%   0.0%     129B               rustls alloc::raw_vec::finish_grow
+ 0.0%   0.0%     129B               rustls core::ptr::drop_in_place<alloc::vec::Vec<rustls::msgs::handshake::PresharedK...
+ 0.0%   0.0%     129B                  std core::ptr::drop_in_place<alloc::vec::Vec<rustls::msgs::handshake::KeyShareEn...
+ 0.0%   0.0%     128B               rustls alloc::raw_vec::RawVec<T,A>::allocate_in

@@ -136,36 +136,18 @@ plt.savefig("quinn_binary_reduce_client.png", dpi=500)
 plt.clf()
 
 df_mqtt_tcp = pd.read_csv(
-    "mqtt/results_connection_time.csv")
-g = sns.FacetGrid(df_mqtt_tcp, col="scenario", row="link", hue="type",
-                  margin_titles=True, height=4, aspect=1.33, palette="Set2")
-g.map(sns.barplot, 'type', 'time', order=df_mqtt_tcp.type.unique()).add_legend()
-g.set_axis_labels("Implementation", "Time (ms)",)
-for ax in g.axes.flatten():
-    for p in ax.patches:
-        ax.annotate("%.3f" % p.get_height(), (p.get_x() + p.get_width() / 2., p.get_height()),
-                    ha='center', va='center', fontsize=11, color='black', xytext=(0, 5),
-                    textcoords='offset points')
-g.fig.subplots_adjust(top=0.9)
-g.fig.suptitle(
-    "Time for transport protocol\nto establish connection in base rumqtt vs MQuicTTquic.\n")
-plt.savefig("analysis_connection_time.png", dpi=500)
-
-plt.clf()
-
-df_mqtt_tcp = pd.read_csv(
     "mqtt/results_comm_time_home.csv")
 g = sns.FacetGrid(df_mqtt_tcp, col_wrap=2, col="link",
                   height=2.5, aspect=1.33, palette="Set2")
 g.map(sns.boxplot, 'type', 'time', order=df_mqtt_tcp.type.unique())
-for ax in g.axes.flatten(): 
+for ax in g.axes.flatten():
     ax.tick_params(labelbottom=True)
 plt.tight_layout()
 g.fig.subplots_adjust(top=0.9)
 g.set_axis_labels("", "Time (s)")
 g.add_legend()
 g.fig.suptitle(
-    "Time taken to transmit all data in base rumqtt vs MQuicTT.\n")
+    "Time taken to transmit all data in the IoT home scenario\n")
 plt.savefig("analysis_comm_time_home.png", dpi=500)
 
 plt.clf()
@@ -175,14 +157,14 @@ df_mqtt_tcp = pd.read_csv(
 g = sns.FacetGrid(df_mqtt_tcp, col_wrap=2, col="link",
                   height=2.5, aspect=1.33, palette="Set2")
 g.map(sns.boxplot, 'type', 'time', order=df_mqtt_tcp.type.unique())
-for ax in g.axes.flatten(): 
+for ax in g.axes.flatten():
     ax.tick_params(labelbottom=True)
 plt.tight_layout()
 g.fig.subplots_adjust(top=0.9)
 g.set_axis_labels("", "Time (s)")
 g.add_legend()
 g.fig.suptitle(
-    "Time taken to transmit all data in base rumqtt vs MQuicTT.\n")
+    "Time taken to transmit all data in the printer farm scenario\n")
 plt.savefig("analysis_comm_time_farm.png", dpi=500)
 
 plt.clf()
@@ -192,12 +174,12 @@ df_mqtt_tcp = pd.read_csv(
 g = sns.FacetGrid(df_mqtt_tcp, col_wrap=2, col="link",
                   height=2.5, aspect=1.33, palette="Set2")
 g.map(sns.boxplot, 'type', 'time', order=df_mqtt_tcp.type.unique())
-for ax in g.axes.flatten(): 
+for ax in g.axes.flatten():
     ax.tick_params(labelbottom=True)
 plt.tight_layout()
 g.fig.subplots_adjust(top=0.9)
 g.fig.suptitle(
-    "Time taken to transmit all data in base rumqtt vs MQuicTT.\n")
+    "Time taken to transmit all data in the synthetic scenario\n")
 g.set_axis_labels("", "Time (s)")
 g.add_legend()
 plt.savefig("analysis_comm_time_synth.png", dpi=500)
@@ -209,12 +191,12 @@ df_mqtt_tcp = pd.read_csv(
 g = sns.FacetGrid(df_mqtt_tcp, col_wrap=2, col="link",
                   height=2.5, aspect=1.33, palette="Set2")
 g.map(sns.boxplot, 'type', 'time', order=df_mqtt_tcp.type.unique())
-for ax in g.axes.flatten(): 
+for ax in g.axes.flatten():
     ax.tick_params(labelbottom=True)
 plt.tight_layout()
 g.fig.subplots_adjust(top=0.9)
 g.fig.suptitle(
-    "Time taken to transmit all data in base rumqtt vs MQuicTT.\n")
+    "Time taken to establish a secure connection - IoT home scenario\n")
 g.set_axis_labels("", "Time (s)")
 g.add_legend()
 plt.savefig("analysis_connection_time_home.png", dpi=500)
@@ -226,12 +208,12 @@ df_mqtt_tcp = pd.read_csv(
 g = sns.FacetGrid(df_mqtt_tcp, col_wrap=2, col="link",
                   height=2.5, aspect=1.33, palette="Set2")
 g.map(sns.boxplot, 'type', 'time', order=df_mqtt_tcp.type.unique())
-for ax in g.axes.flatten(): 
+for ax in g.axes.flatten():
     ax.tick_params(labelbottom=True)
 plt.tight_layout()
 g.fig.subplots_adjust(top=0.9)
 g.fig.suptitle(
-    "Time taken to transmit all data in base rumqtt vs MQuicTT.\n")
+    "Time taken to establish a secure connection - printer farm scenario\n")
 g.set_axis_labels("", "Time (s)")
 g.add_legend()
 plt.savefig("analysis_connection_time_farm.png", dpi=500)
@@ -243,12 +225,35 @@ df_mqtt_tcp = pd.read_csv(
 g = sns.FacetGrid(df_mqtt_tcp, col_wrap=2, col="link",
                   height=2.5, aspect=1.33, palette="Set2")
 g.map(sns.boxplot, 'type', 'time', order=df_mqtt_tcp.type.unique())
-for ax in g.axes.flatten(): 
+for ax in g.axes.flatten():
     ax.tick_params(labelbottom=True)
 plt.tight_layout()
 g.fig.subplots_adjust(top=0.9)
 g.fig.suptitle(
-    "Time taken to transmit all data in base rumqtt vs MQuicTT.\n")
+    "Time taken to establish a secure connection - synthetic scenario\n")
 g.set_axis_labels("", "Time (s)")
 g.add_legend()
 plt.savefig("analysis_connection_time_synth.png", dpi=500)
+
+plt.clf()
+
+data = [8.855, 1.539, 5.9, 13.4, 163.395, 41.514, 8.2, 2.844, ]
+explode = [0.04, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05]
+labels = ["Connection close", "Congestion Control", "Crypto", "0-RTT", "Main state machine",
+          "Streams state machine", "Packet building", "Address validation"]
+fig = plt.figure(figsize=(7, 6))
+plt.pie(data, labels=labels, colors=sns.color_palette(
+    "pastel"), autopct='%0.0f%%', explode=explode, textprops={'fontsize': 10})
+plt.title("Quinn binary size contribution by feature")
+plt.savefig("mquictt_binary_by_function.png", dpi=500)
+
+plt.clf()
+
+data = [70.175, 26.136, 24.976, 9.295, 2.181]
+explode = [0.05, 0.05, 0.05, 0.05, 0.05]
+labels = ["Handshake", "State Handling", "Cipher Suite Logic", "QUIC Extensions", "Key Scheduling"]
+fig = plt.figure(figsize=(7, 6))
+plt.pie(data, labels=labels, colors=sns.color_palette(
+    "pastel"), autopct='%0.0f%%', explode=explode, textprops={'fontsize': 10})
+plt.title("Rustls binary size contribution by feature")
+plt.savefig("rustls_binary_by_function.png", dpi=500)

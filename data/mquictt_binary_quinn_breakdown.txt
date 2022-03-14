@@ -1,0 +1,86 @@
+Connection Close
+--------------
+
+0.0%   0.1%  4.6KiB          quinn quinn::connection::ConnectionInner::terminate
+0.0%   0.0%    841B          quinn_proto quinn_proto::connection::Connection::close_common
+0.0%   0.0%    814B          quinn_proto quinn_proto::connection::Connection::close_inner
+0.0%   0.0%  1.3KiB          quinn_proto quinn_proto::connection::Connection::discard_space
+0.0%   0.0%  1.3KiB          quinn_proto quinn_proto::endpoint::Endpoint::initial_close
+
+Crypto
+---------------------
+0.0%   0.1%  2.6KiB          quinn_proto quinn_proto::connection::Connection::read_crypto
+0.0%   0.1%  2.1KiB          quinn_proto quinn_proto::connection::Connection::write_crypto
+0.0%   0.0%  1.2KiB          quinn_proto quinn_proto::connection::Connection::upgrade_crypto
+
+0-RTT
+---------------------
+0.0%   0.1%  2.7KiB          quinn_proto quinn_proto::connection::Connection::init_0rtt
+0.0%   0.1%  5.1KiB          quinn_proto quinn_proto::connection::Connection::process_early_payload
+0.0%   0.1%  2.6KiB          quinn_proto quinn_proto::endpoint::Endpoint::stateless_reset
+0.0%   0.1%  2.0KiB          quinn_proto quinn_proto::connection::streams::state::StreamsState::zero_rtt_rejected
+0.0%   0.0%  1.0KiB          quinn_proto quinn_proto::connection::streams::state::StreamsState::retransmit_all_for_0rtt
+
+Main State Machine
+-----------------------
+0.0%   0.1%  5.0KiB          quinn_proto quinn_proto::connection::Connection::new
+0.2%   0.8% 30.7KiB          quinn_proto quinn_proto::connection::Connection::process_payload
+0.2%   0.6% 22.0KiB          quinn_proto quinn_proto::connection::Connection::process_decrypted_packet
+0.1%   0.5% 18.1KiB          quinn_proto quinn_proto::connection::Connection::poll_transmit
+0.1%   0.4% 16.9KiB          quinn_proto quinn_proto::connection::Connection::handle_packet
+0.1%   0.2%  8.1KiB          quinn_proto quinn_proto::connection::Connection::handle_timeout
+0.0%   0.1%  5.1KiB          quinn_proto quinn_proto::connection::Connection::on_ack_received
+0.0%   0.1%  4.5KiB          quinn_proto quinn_proto::connection::Connection::detect_lost_packets
+0.0%   0.1%  2.9KiB          quinn_proto quinn_proto::connection::Connection::handle_decode
+0.0%   0.1%  2.1KiB          quinn_proto quinn_proto::connection::Connection::handle_event
+0.0%   0.0%  1.3KiB          quinn_proto quinn_proto::connection::Connection::discard_space
+0.0%   0.0%  1.2KiB          quinn_proto quinn_proto::connection::Connection::handle_coalesced
+0.0%   0.0%  1.1KiB          quinn_proto quinn_proto::connection::Connection::populate_acks
+0.0%   0.0%    915B          quinn_proto quinn_proto::connection::Connection::on_packet_acked
+0.0%   0.0%    801B          quinn_proto quinn_proto::connection::Connection::pto_time_and_space
+0.2%   0.7% 26.7KiB          quinn_proto quinn_proto::endpoint::Endpoint::handle
+0.0%   0.1%  4.3KiB          quinn_proto quinn_proto::transport_parameters::TransportParameters::read
+0.0%   0.1%  3.5KiB          quinn_proto quinn_proto::packet::PartialDecode::new
+0.0%   0.1%  3.0KiB          quinn_proto quinn_proto::transport_parameters::TransportParameters::write
+0.0%   0.0%  1.7KiB          quinn_proto quinn_proto::connection::Connection::handle_first_packet
+0.0%   0.0%  1.5KiB          quinn_proto quinn_proto::packet::PartialDecode::finish
+0.0%   0.0%  1.5KiB          quinn_proto quinn_proto::connection::datagrams::DatagramState::received
+0.0%   0.0%     479B          quinn_proto quinn_proto::connection::Connection::on_packet_authenticated
+
+
+Stream State Machine
+----------------------
+0.1%   0.2%  8.4KiB          quinn_proto quinn_proto::connection::streams::state::StreamsState::write_control_frames
+0.0%   0.1%  4.2KiB          quinn_proto quinn_proto::connection::streams::state::StreamsState::write_stream_frames
+0.0%   0.1%  4.0KiB          quinn_proto quinn_proto::connection::streams::state::StreamsState::received
+0.0%   0.1%  3.7KiB          quinn_proto quinn_proto::connection::streams::SendStream::write
+0.0%   0.1%  2.9KiB          quinn_proto quinn_proto::connection::streams::state::StreamsState::received_reset
+0.0%   0.1%  2.4KiB          quinn_proto quinn_proto::connection::streams::state::StreamsState::received_max_stream_data
+0.0%   0.0%  1.9KiB                quinn quinn::send_stream::SendStream::poll_finish
+0.0%   0.0%  1.8KiB          quinn_proto quinn_proto::connection::streams::recv::Chunks::finalize_inner
+0.0%   0.0%  1.8KiB          quinn_proto quinn_proto::connection::streams::state::StreamsState::insert
+0.0%   0.0%  1.7KiB          quinn_proto quinn_proto::connection::streams::recv::Recv::ingest
+0.0%   0.0%  1.7KiB          quinn_proto quinn_proto::connection::streams::recv::Chunks::next
+0.0%   0.0%  1.6KiB          quinn_proto quinn_proto::connection::streams::RecvStream::stop
+0.0%   0.0%  1.4KiB          quinn_proto quinn_proto::connection::streams::state::StreamsState::received_ack_of
+0.0%   0.0%  1.3KiB          quinn_proto quinn_proto::connection::streams::state::StreamsState::reset_acked
+0.0%   0.0%  1.0KiB          quinn_proto quinn_proto::endpoint::Endpoint::add_connection
+0.0%   0.0%    863B          quinn_proto quinn_proto::connection::Connection::handle_peer_params
+0.0%   0.0%    851B          quinn_proto quinn_proto::connection::streams::push_pending
+
+Packet building
+--------------------
+0.0%   0.1%  3.2KiB          quinn_proto quinn_proto::connection::packet_builder::PacketBuilder::new
+0.0%   0.1%  3.1KiB          quinn_proto quinn_proto::packet::Header::encode
+0.0%   0.0%  1.9KiB          quinn_proto quinn_proto::connection::packet_builder::PacketBuilder::finish
+
+Address validation
+--------------------
+0.0%   0.0%  1.1KiB          quinn_proto quinn_proto::token::RetryToken::from_bytes
+0.0%   0.0%    934B          quinn_proto quinn_proto::token::RetryToken::encode
+0.0%   0.0%    810B          quinn_proto <quinn_proto::crypto::rustls::TlsSession as quinn_proto::crypto::Session>::is_valid_retry
+
+Congestion Control
+--------------------
+0.0%   0.0%    920B          quinn_proto <quinn_proto::congestion::cubic::Cubic as quinn_proto::congestion::Controller>::on_ack
+0.0%   0.0%    619B          quinn_proto <quinn_proto::congestion::cubic::Cubic as quinn_proto::congestion::Controlle...

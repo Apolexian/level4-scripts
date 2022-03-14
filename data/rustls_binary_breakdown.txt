@@ -1,0 +1,74 @@
+Handshake
+-----------
+0.2%   0.5%  20.9KiB               rustls rustls::server::tls13::client_hello::CompleteClientHelloHandling::handle_cli...
+0.1%   0.3%  12.2KiB               rustls rustls::server::tls12::client_hello::CompleteClientHelloHandling::handle_cli...
+0.1%   0.2%   6.5KiB               rustls rustls::server::hs::ExpectClientHello::with_certified_key
+0.0%   0.1%   5.4KiB               rustls <rustls::server::tls13::ExpectFinished as rustls::conn::State<rustls::server...
+0.0%   0.1%   3.8KiB               rustls rustls::msgs::handshake::HandshakeMessagePayload::read_version
+0.0%   0.1%   3.5KiB               rustls rustls::server::hs::process_client_hello
+0.0%   0.1%   2.8KiB               rustls <rustls::msgs::handshake::ClientExtension as rustls::msgs::codec::Codec>::read
+0.0%   0.1%   2.8KiB               rustls <rustls::msgs::handshake::HandshakeMessagePayload as rustls::msgs::codec::Co...
+0.0%   0.0%   1.6KiB               rustls <rustls::msgs::handshake::ServerExtension as rustls::msgs::codec::Codec>::read
+0.0%   0.0%   1.4KiB               rustls rustls::tls13::key_schedule::KeyScheduleHandshake::into_traffic_with_client_...
+0.0%   0.0%   1.0KiB               rustls rustls::server::tls12::client_hello::emit_server_hello
+0.0%   0.0%   1.0KiB               rustls <rustls::msgs::handshake::ServerExtension as rustls::msgs::codec::Codec>::en...
+0.0%   0.0%     991B               rustls <rustls::msgs::handshake::HelloRetryExtension as rustls::msgs::codec::Codec>...
+0.0%   0.0%     984B               rustls <rustls::msgs::handshake::ServerHelloPayload as rustls::msgs::codec::Codec>:...
+0.0%   0.0%     955B               rustls rustls::msgs::hsjoiner::HandshakeJoiner::take_message
+0.0%   0.0%     808B               rustls <rustls::msgs::handshake::CertReqExtension as rustls::msgs::codec::Codec>::read
+0.0%   0.0%     808B               rustls <rustls::server::handy::ServerSessionMemoryCache as rustls::server::server_c...
+0.0%   0.0%     805B               rustls <rustls::msgs::handshake::ClientExtension as core::fmt::Debug>::fmt
+0.0%   0.0%     727B               rustls rustls::msgs::handshake::ClientHelloPayload::has_duplicate_extension
+0.0%   0.0%     695B               rustls <rustls::msgs::handshake::CertificateRequestPayload as rustls::msgs::codec::...
+0.0%   0.0%     502B               rustls rustls::hash_hs::HandshakeHash::rollup_for_hrr
+
+State Handling
+--------------
+0.0%   0.1%   3.2KiB               rustls <rustls::server::tls12::ExpectClientKx as rustls::conn::State<rustls::server...
+0.0%   0.1%   2.8KiB               rustls <rustls::server::tls12::ExpectCertificate as rustls::conn::State<rustls::ser...
+0.0%   0.1%   2.6KiB               rustls <rustls::server::tls13::ExpectCertificate as rustls::conn::State<rustls::ser...
+0.0%   0.1%   2.6KiB               rustls <rustls::server::tls12::ExpectFinished as rustls::conn::State<rustls::server...
+0.0%   0.1%   2.5KiB               rustls <rustls::server::tls13::ExpectTraffic as rustls::conn::State<rustls::server:...
+0.0%   0.0%   2.0KiB               rustls <rustls::server::tls12::ExpectCertificateVerify as rustls::conn::State<rustl...
+0.0%   0.0%   1.8KiB               rustls <rustls::msgs::persist::ServerSessionValue as rustls::msgs::codec::Codec>::read
+0.0%   0.0%   1.7KiB               rustls <rustls::server::tls13::ExpectCertificateVerify as rustls::conn::State<rustl...
+0.0%   0.0%   1.5KiB               rustls rustls::conn::CommonState::send_appdata_encrypt
+0.0%   0.0%   1.5KiB               rustls rustls::conn::CommonState::send_msg_encrypt
+0.0%   0.0%     911B               rustls rustls::verify::verify_tls13
+0.0%   0.0%     838B               rustls rustls::conn::CommonState::process_main_protocol
+0.0%   0.0%     830B               rustls rustls::tls12::prf::prf
+0.0%   0.0%     520B               rustls rustls::check::check_message
+0.0%   0.0%     280B               rustls rustls::verify::construct_tls13_server_verify_message
+0.0%   0.0%     280B               rustls rustls::verify::construct_tls13_client_verify_message
+0.0%   0.0%     277B               rustls rustls::versions::EnabledVersions::new
+
+Cipher Suite Logic
+--------------------
+0.0%   0.1%   4.6KiB               rustls <rustls::msgs::enums::CipherSuite as core::fmt::Debug>::fmt
+0.0%   0.1%   2.1KiB               rustls <rustls::msgs::enums::CipherSuite as core::convert::From<u16>>::from
+0.0%   0.0%   1.4KiB               rustls rustls::msgs::enums::CipherSuite::get_u16
+0.0%   0.0%   1.2KiB               rustls <rustls::tls12::cipher::GcmMessageEncrypter as rustls::cipher::MessageEncryp...
+0.0%   0.0%   1.2KiB               rustls rustls::tls12::ConnectionSecrets::make_cipher_pair
+0.0%   0.0%   1.0KiB               rustls rustls::verify::verify_signed_struct
+0.0%   0.0%     702B               rustls rustls::tls13::Tls13CipherSuite::derive_decrypter
+0.0%   0.0%     702B               rustls rustls::tls13::Tls13CipherSuite::derive_encrypter
+0.0%   0.0%     582B               rustls <rustls::tls12::cipher::GcmMessageDecrypter as rustls::cipher::MessageDecryp...
+0.0%   0.0%     280B               rustls rustls::suites::compatible_sigscheme_for_suites
+0.0%   0.0%     264B               rustls rustls::sign::any_eddsa_type
+0.0%   0.0%     146B               rustls <rustls::sign::Ed25519Signer as rustls::sign::Signer>::sign
+
+QUIC Extensions
+-----------
+0.0%   0.1%   4.2KiB               rustls rustls::server::hs::ExtensionProcessing::process_common
+0.0%   0.0%   1.9KiB               rustls rustls::quic::Keys::new
+0.0%   0.0%   1.4KiB               rustls rustls::quic::Secrets::next_packet_keys
+0.0%   0.0%   1.0KiB               rustls rustls::quic::write_hs
+0.0%   0.0%     510B               rustls rustls::quic::PacketKey::encrypt_in_place
+0.0%   0.0%     285B               rustls rustls::quic::Keys::initial
+
+Key Schedule
+-------------
+0.0%   0.0%     597B               rustls rustls::tls13::key_schedule::KeyScheduleTraffic::export_keying_material
+0.0%   0.0%     593B               rustls rustls::tls13::key_schedule::KeyScheduleHandshakeStart::derive_handshake_sec...
+0.0%   0.0%     514B               rustls rustls::tls13::key_schedule::KeyScheduleTraffic::resumption_master_secret_an...
+0.0%   0.0%     477B               rustls rustls::tls13::key_schedule::KeySchedule::input_secret
