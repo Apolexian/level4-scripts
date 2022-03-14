@@ -154,17 +154,101 @@ plt.savefig("analysis_connection_time.png", dpi=500)
 plt.clf()
 
 df_mqtt_tcp = pd.read_csv(
-    "mqtt/results_comm_time.csv")
-g = sns.FacetGrid(df_mqtt_tcp, col="scenario", row="link", hue="type",
-                  margin_titles=True, height=4, aspect=1.33, palette="Set2")
-g.map(sns.barplot, 'type', 'time', order=df_mqtt_tcp.type.unique()).add_legend()
-g.set_axis_labels("Implementation", "Time (s)",)
-for ax in g.axes.flatten():
-    for p in ax.patches:
-        ax.annotate("%.3f" % p.get_height(), (p.get_x() + p.get_width() / 2., p.get_height()),
-                    ha='center', va='center', fontsize=11, color='black', xytext=(0, 5),
-                    textcoords='offset points')
+    "mqtt/results_comm_time_home.csv")
+g = sns.FacetGrid(df_mqtt_tcp, col_wrap=2, col="link",
+                  height=2.5, aspect=1.33, palette="Set2")
+g.map(sns.boxplot, 'type', 'time', order=df_mqtt_tcp.type.unique())
+for ax in g.axes.flatten(): 
+    ax.tick_params(labelbottom=True)
+plt.tight_layout()
+g.fig.subplots_adjust(top=0.9)
+g.set_axis_labels("", "Time (s)")
+g.add_legend()
+g.fig.suptitle(
+    "Time taken to transmit all data in base rumqtt vs MQuicTT.\n")
+plt.savefig("analysis_comm_time_home.png", dpi=500)
+
+plt.clf()
+
+df_mqtt_tcp = pd.read_csv(
+    "mqtt/results_comm_time_farm.csv")
+g = sns.FacetGrid(df_mqtt_tcp, col_wrap=2, col="link",
+                  height=2.5, aspect=1.33, palette="Set2")
+g.map(sns.boxplot, 'type', 'time', order=df_mqtt_tcp.type.unique())
+for ax in g.axes.flatten(): 
+    ax.tick_params(labelbottom=True)
+plt.tight_layout()
+g.fig.subplots_adjust(top=0.9)
+g.set_axis_labels("", "Time (s)")
+g.add_legend()
+g.fig.suptitle(
+    "Time taken to transmit all data in base rumqtt vs MQuicTT.\n")
+plt.savefig("analysis_comm_time_farm.png", dpi=500)
+
+plt.clf()
+
+df_mqtt_tcp = pd.read_csv(
+    "mqtt/results_comm_time_synth.csv")
+g = sns.FacetGrid(df_mqtt_tcp, col_wrap=2, col="link",
+                  height=2.5, aspect=1.33, palette="Set2")
+g.map(sns.boxplot, 'type', 'time', order=df_mqtt_tcp.type.unique())
+for ax in g.axes.flatten(): 
+    ax.tick_params(labelbottom=True)
+plt.tight_layout()
 g.fig.subplots_adjust(top=0.9)
 g.fig.suptitle(
     "Time taken to transmit all data in base rumqtt vs MQuicTT.\n")
-plt.savefig("analysis_comm_time.png", dpi=500)
+g.set_axis_labels("", "Time (s)")
+g.add_legend()
+plt.savefig("analysis_comm_time_synth.png", dpi=500)
+
+plt.clf()
+
+df_mqtt_tcp = pd.read_csv(
+    "mqtt/results_connection_time_home.csv")
+g = sns.FacetGrid(df_mqtt_tcp, col_wrap=2, col="link",
+                  height=2.5, aspect=1.33, palette="Set2")
+g.map(sns.boxplot, 'type', 'time', order=df_mqtt_tcp.type.unique())
+for ax in g.axes.flatten(): 
+    ax.tick_params(labelbottom=True)
+plt.tight_layout()
+g.fig.subplots_adjust(top=0.9)
+g.fig.suptitle(
+    "Time taken to transmit all data in base rumqtt vs MQuicTT.\n")
+g.set_axis_labels("", "Time (s)")
+g.add_legend()
+plt.savefig("analysis_connection_time_home.png", dpi=500)
+
+plt.clf()
+
+df_mqtt_tcp = pd.read_csv(
+    "mqtt/results_connection_time_farm.csv")
+g = sns.FacetGrid(df_mqtt_tcp, col_wrap=2, col="link",
+                  height=2.5, aspect=1.33, palette="Set2")
+g.map(sns.boxplot, 'type', 'time', order=df_mqtt_tcp.type.unique())
+for ax in g.axes.flatten(): 
+    ax.tick_params(labelbottom=True)
+plt.tight_layout()
+g.fig.subplots_adjust(top=0.9)
+g.fig.suptitle(
+    "Time taken to transmit all data in base rumqtt vs MQuicTT.\n")
+g.set_axis_labels("", "Time (s)")
+g.add_legend()
+plt.savefig("analysis_connection_time_farm.png", dpi=500)
+
+plt.clf()
+
+df_mqtt_tcp = pd.read_csv(
+    "mqtt/results_connection_time_synth.csv")
+g = sns.FacetGrid(df_mqtt_tcp, col_wrap=2, col="link",
+                  height=2.5, aspect=1.33, palette="Set2")
+g.map(sns.boxplot, 'type', 'time', order=df_mqtt_tcp.type.unique())
+for ax in g.axes.flatten(): 
+    ax.tick_params(labelbottom=True)
+plt.tight_layout()
+g.fig.subplots_adjust(top=0.9)
+g.fig.suptitle(
+    "Time taken to transmit all data in base rumqtt vs MQuicTT.\n")
+g.set_axis_labels("", "Time (s)")
+g.add_legend()
+plt.savefig("analysis_connection_time_synth.png", dpi=500)
