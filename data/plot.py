@@ -197,7 +197,7 @@ plt.tight_layout()
 g.fig.subplots_adjust(top=0.9)
 g.fig.suptitle(
     "Time taken to establish a secure connection - IoT home scenario\n")
-g.set_axis_labels("", "Time (s)")
+g.set_axis_labels("", "Time (ms)")
 g.add_legend()
 plt.savefig("analysis_connection_time_home.png", dpi=500)
 
@@ -214,7 +214,7 @@ plt.tight_layout()
 g.fig.subplots_adjust(top=0.9)
 g.fig.suptitle(
     "Time taken to establish a secure connection - printer farm scenario\n")
-g.set_axis_labels("", "Time (s)")
+g.set_axis_labels("", "Time (ms)")
 g.add_legend()
 plt.savefig("analysis_connection_time_farm.png", dpi=500)
 
@@ -231,7 +231,7 @@ plt.tight_layout()
 g.fig.subplots_adjust(top=0.9)
 g.fig.suptitle(
     "Time taken to establish a secure connection - synthetic scenario\n")
-g.set_axis_labels("", "Time (s)")
+g.set_axis_labels("", "Time (ms)")
 g.add_legend()
 plt.savefig("analysis_connection_time_synth.png", dpi=500)
 
