@@ -3,6 +3,7 @@ import seaborn as sns
 import numpy as np
 import matplotlib.pyplot as plt
 from math import pi
+from matplotlib.patches import Patch
 
 
 def show_values(axs, orient="v", space=.01):
@@ -63,12 +64,27 @@ data.append(components)
 data.append(percents)
 df = pd.DataFrame(data).transpose()
 df.columns = ["Crate", "Contribution"]
+palette = {"std": "#72B5A0",
+           "quinn": "#E89575",
+           "regex": "#72B5A0",
+           "rustls": "#E89575",
+           "tokio": "#72B5A0",
+           "ring": "#72B5A0",
+           "url": "#72B5A0",
+           "idna": "#72B5A0",
+           "other": "#72B5A0"}
 sns.set(style="darkgrid")
-sns.set_palette('Set2')
-ax = sns.barplot(data=df, x='Crate', y='Contribution')
+ax = sns.barplot(data=df, x='Crate', y='Contribution', palette=palette)
 plt.xlabel('Crate')
 plt.ylabel('Contribution (%)')
 plt.title("Crates by largest contribution to the client's binary size")
+legend_elements = [
+    Patch(facecolor='#E89575', edgecolor='#E89575',
+          label='QUIC/TLS'),
+    Patch(facecolor='#72B5A0', edgecolor='#72B5A0',
+          label='Other')
+]
+plt.legend(title='Crate function', loc='upper right', handles=legend_elements)
 sns.despine()
 show_values(ax)
 plt.savefig("mquictt_binary_client.png", dpi=500)
@@ -85,11 +101,27 @@ data.append(percents)
 df = pd.DataFrame(data).transpose()
 df.columns = ["Crate", "Contribution"]
 sns.set(style="darkgrid")
-sns.set_palette('Set2')
-ax = sns.barplot(data=df, x='Crate', y='Contribution')
+palette = {"std": "#72B5A0",
+           "quinn": "#E89575",
+           "regex": "#72B5A0",
+           "rustls": "#E89575",
+           "tokio": "#72B5A0",
+           "hyper": "#72B5A0",
+           "url": "#72B5A0",
+           "aho\n_corasick": "#72B5A0",
+           "h2": "#72B5A0",
+           "other": "#72B5A0"}
+ax = sns.barplot(data=df, x='Crate', y='Contribution', palette=palette)
 plt.xlabel('Crate')
 plt.ylabel('Contribution (%)')
 plt.title("Crates by largest contribution to the broker's binary size")
+legend_elements = [
+    Patch(facecolor='#E89575', edgecolor='#E89575',
+          label='QUIC/TLS'),
+    Patch(facecolor='#72B5A0', edgecolor='#72B5A0',
+          label='Other')
+]
+plt.legend(title='Crate function', loc='upper left', handles=legend_elements)
 sns.despine()
 show_values(ax)
 plt.savefig("mquictt_binary_broker.png", dpi=500)
@@ -137,103 +169,96 @@ plt.clf()
 
 df_mqtt_tcp = pd.read_csv(
     "mqtt/results_comm_time_home.csv")
-g = sns.FacetGrid(df_mqtt_tcp, col_wrap=2, col="link",
-                  height=2.5, aspect=1.33, palette="Set2")
-g.map(sns.boxplot, 'type', 'time', order=df_mqtt_tcp.type.unique())
+g = sns.FacetGrid(df_mqtt_tcp, col_wrap=5, col="link",
+                  height=2.5, aspect=0.7, palette="Set2")
+g.map(sns.boxplot, 'type', 'time', order=df_mqtt_tcp.type.unique(), width=0.3)
 for ax in g.axes.flatten():
     ax.tick_params(labelbottom=True)
 plt.tight_layout()
-g.fig.subplots_adjust(top=0.9)
 g.set_axis_labels("", "Time (s)")
 g.add_legend()
-g.fig.suptitle(
-    "Time taken to transmit all data in the IoT home scenario\n")
-plt.savefig("analysis_comm_time_home.png", dpi=500)
+plt.suptitle("Time taken to transmit all data in the IoT home scenario\n", y=1.05)
+plt.savefig("analysis_comm_time_home.png", dpi=500, bbox_inches='tight')
 
 plt.clf()
 
 df_mqtt_tcp = pd.read_csv(
     "mqtt/results_comm_time_farm.csv")
-g = sns.FacetGrid(df_mqtt_tcp, col_wrap=2, col="link",
-                  height=2.5, aspect=1.33, palette="Set2")
-g.map(sns.boxplot, 'type', 'time', order=df_mqtt_tcp.type.unique())
+g = sns.FacetGrid(df_mqtt_tcp, col_wrap=5, col="link",
+                  height=2.5, aspect=0.7, palette="Set2")
+g.map(sns.boxplot, 'type', 'time', order=df_mqtt_tcp.type.unique(), width=0.3)
 for ax in g.axes.flatten():
     ax.tick_params(labelbottom=True)
 plt.tight_layout()
-g.fig.subplots_adjust(top=0.9)
 g.set_axis_labels("", "Time (s)")
 g.add_legend()
 g.fig.suptitle(
-    "Time taken to transmit all data in the printer farm scenario\n")
-plt.savefig("analysis_comm_time_farm.png", dpi=500)
+    "Time taken to transmit all data in the printer farm scenario\n", y=1.05)
+plt.savefig("analysis_comm_time_farm.png", dpi=500, bbox_inches='tight')
 
 plt.clf()
 
 df_mqtt_tcp = pd.read_csv(
     "mqtt/results_comm_time_synth.csv")
-g = sns.FacetGrid(df_mqtt_tcp, col_wrap=2, col="link",
-                  height=2.5, aspect=1.33, palette="Set2")
-g.map(sns.boxplot, 'type', 'time', order=df_mqtt_tcp.type.unique())
+g = sns.FacetGrid(df_mqtt_tcp, col_wrap=5, col="link",
+                  height=2.5, aspect=0.7, palette="Set2")
+g.map(sns.boxplot, 'type', 'time', order=df_mqtt_tcp.type.unique(), width=0.3)
 for ax in g.axes.flatten():
     ax.tick_params(labelbottom=True)
 plt.tight_layout()
-g.fig.subplots_adjust(top=0.9)
 g.fig.suptitle(
-    "Time taken to transmit all data in the synthetic scenario\n")
+    "Time taken to transmit all data in the synthetic scenario\n", y=1.05)
 g.set_axis_labels("", "Time (s)")
 g.add_legend()
-plt.savefig("analysis_comm_time_synth.png", dpi=500)
+plt.savefig("analysis_comm_time_synth.png", dpi=500, bbox_inches='tight')
 
 plt.clf()
 
 df_mqtt_tcp = pd.read_csv(
     "mqtt/results_connection_time_home.csv")
-g = sns.FacetGrid(df_mqtt_tcp, col_wrap=2, col="link",
-                  height=2.5, aspect=1.33, palette="Set2")
-g.map(sns.boxplot, 'type', 'time', order=df_mqtt_tcp.type.unique())
+g = sns.FacetGrid(df_mqtt_tcp, col_wrap=5, col="link",
+                  height=2.5, aspect=0.7, palette="Set2")
+g.map(sns.boxplot, 'type', 'time', order=df_mqtt_tcp.type.unique(), width=0.3)
 for ax in g.axes.flatten():
     ax.tick_params(labelbottom=True)
 plt.tight_layout()
-g.fig.subplots_adjust(top=0.9)
 g.fig.suptitle(
-    "Time taken to establish a secure connection - IoT home scenario\n")
+    "Time taken to establish a secure connection - IoT home scenario\n", y=1.05)
 g.set_axis_labels("", "Time (ms)")
 g.add_legend()
-plt.savefig("analysis_connection_time_home.png", dpi=500)
+plt.savefig("analysis_connection_time_home.png", dpi=500, bbox_inches='tight')
 
 plt.clf()
 
 df_mqtt_tcp = pd.read_csv(
     "mqtt/results_connection_time_farm.csv")
-g = sns.FacetGrid(df_mqtt_tcp, col_wrap=2, col="link",
-                  height=2.5, aspect=1.33, palette="Set2")
-g.map(sns.boxplot, 'type', 'time', order=df_mqtt_tcp.type.unique())
+g = sns.FacetGrid(df_mqtt_tcp, col_wrap=5, col="link",
+                  height=2.5, aspect=0.7, palette="Set2")
+g.map(sns.boxplot, 'type', 'time', order=df_mqtt_tcp.type.unique(), width=0.3)
 for ax in g.axes.flatten():
     ax.tick_params(labelbottom=True)
 plt.tight_layout()
-g.fig.subplots_adjust(top=0.9)
 g.fig.suptitle(
-    "Time taken to establish a secure connection - printer farm scenario\n")
+    "Time taken to establish a secure connection - printer farm scenario\n", y=1.05)
 g.set_axis_labels("", "Time (ms)")
 g.add_legend()
-plt.savefig("analysis_connection_time_farm.png", dpi=500)
+plt.savefig("analysis_connection_time_farm.png", dpi=500, bbox_inches='tight')
 
 plt.clf()
 
 df_mqtt_tcp = pd.read_csv(
     "mqtt/results_connection_time_synth.csv")
-g = sns.FacetGrid(df_mqtt_tcp, col_wrap=2, col="link",
-                  height=2.5, aspect=1.33, palette="Set2")
-g.map(sns.boxplot, 'type', 'time', order=df_mqtt_tcp.type.unique())
+g = sns.FacetGrid(df_mqtt_tcp, col_wrap=5, col="link",
+                  height=2.5, aspect=0.7, palette="Set2")
+g.map(sns.boxplot, 'type', 'time', order=df_mqtt_tcp.type.unique(), width=0.3)
 for ax in g.axes.flatten():
     ax.tick_params(labelbottom=True)
 plt.tight_layout()
-g.fig.subplots_adjust(top=0.9)
 g.fig.suptitle(
-    "Time taken to establish a secure connection - synthetic scenario\n")
+    "Time taken to establish a secure connection - synthetic scenario\n", y=1.05)
 g.set_axis_labels("", "Time (ms)")
 g.add_legend()
-plt.savefig("analysis_connection_time_synth.png", dpi=500)
+plt.savefig("analysis_connection_time_synth.png", dpi=500, bbox_inches='tight')
 
 plt.clf()
 
@@ -251,7 +276,8 @@ plt.clf()
 
 data = [70.175, 26.136, 24.976, 9.295, 2.181]
 explode = [0.05, 0.05, 0.05, 0.05, 0.05]
-labels = ["Handshake", "State Handling", "Cipher Suite Logic", "QUIC Extensions", "Key Scheduling"]
+labels = ["Handshake", "State Handling",
+          "Cipher Suite Logic", "QUIC Extensions", "Key Scheduling"]
 fig = plt.figure(figsize=(7, 6))
 plt.pie(data, labels=labels, colors=sns.color_palette(
     "pastel"), autopct='%0.0f%%', explode=explode, textprops={'fontsize': 10})
